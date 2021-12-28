@@ -5,7 +5,7 @@ in python language.
 
 ## Roadmap
 This repo presents the following data structure from foundation to advanced level.
-- Arrays
+- [Arrays](Arrays/Arrays.md)
 - Linked List
 - Hash Table
 - Stack and Queue
