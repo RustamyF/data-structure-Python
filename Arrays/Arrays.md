@@ -145,7 +145,7 @@ Test case 2
 Input: nums = [1,0,1,1,0,1]
 Output: 2
 ```
-##### Solution [Code](code/max_conse_ones.py)
+##### Solution [Code](code/max_consec_ones.py)
 We can solve this problem by passing through every element in the array and keeping track of the
 maximum number of consecutive ones. The following sinpit shows the python solution.
 ```python
