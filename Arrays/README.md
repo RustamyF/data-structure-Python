@@ -28,13 +28,13 @@ the element in index 0 and index 2, we use:
 >>> array[0]
 1
 >>> array[2]
-'dog'
+'cat'
 ```
 #### 2. Adding an element to Array 
 There are many ways of inserting an element to an Array:
 1. Inserting a new element at the end of the Array.
 1. Inserting a new element at the beginning of the Array.
-1. Inserting a new element at any given index inside the Array \n
+1. Inserting a new element at any given index inside the Array
 
 Adding an element at the end of an array is easy. We can use the **append()** method to add new elements at the end of  Array.
 We can also just add the new element to the array as a list.
@@ -98,7 +98,7 @@ same value in an array, this method removes only the first one.
 Speed of searching is one of the most important  operation that makes the programmers decide what data structure to use for the problem to be solved with.
 Searching means to find an occurrence of a particular element in the Array and return its position. We might need to search an Array to find out whether or not 
 an element is present in the Array. We might also want to search an Array that is arranged in a specific fashion to determine which index to insert a new element at.
-1. Linear search: In this method we look every element of an array one by one until we find that element and return its index. The following code snippet will perform linear search 
+* Linear search: In this method we look every element of an array one by one until we find that element and return its index. The following code snippet will perform linear search 
 and return the index of the element that is equal to the value we are searching and prints "this element does not exist" when there is not such element in the array.
 ```python
 def search(value):
@@ -109,6 +109,7 @@ def search(value):
 ```
 
 * Binary Search
+
 This method reduces time complexity of search to log(n) when the elements in the array are sorted. This algorithm will not work if the array is not sorted.
 Binary search divides the array into half and checks if the middle element is bigger than the target value or smaller. If it was bigger, it will take the ride side of the mid point and repeats this process untill
 the values is found.
@@ -133,6 +134,12 @@ def binary_search(value):
     return "this element does not exist"
 ```
 ## Examples problems with Arrays
+
+When solving array problems, there are two most popular methods that can be used to tackle the problem:
+1. The first one is the one pointer or linear search. This is a basic approach and can solve a lots of array problem.
+2. The second method is the two pointer. This is a very powerful method where within the same loop, instead
+of using one pointer, you can keep track of two pointers. These pointers can go at the same direction or the oposite direction.
+The following example problems will explain the concept of one pointer and two pointer search methods.
 #### 1. Max Consecutive Ones
 Given a binary array nums, return the maximum number of consecutive 1's in the array.
 Test case 1
@@ -267,7 +274,7 @@ array=[1,2,3]
 print(result.duplicateZeros(array))
 ```
 #### 4. Merge Sorted Array
-Problem statement
+Problem statement:
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, 
 representing the number of elements in nums1 and nums2 respectively.
 
@@ -330,3 +337,68 @@ nums1, m = [1], 1
 nums2, n = [], 0
 print(result.merge_easy(nums1, m, nums2, n))
 ```
+
+#### 5. Valid Mountain Array
+Problem statement:
+Given an array of integers arr, return true if and only if it is a valid mountain array.
+
+Recall that arr is a mountain array if and only if:
+
+* arr.length >= 3
+* There exists some i with 0 < i < arr.length - 1 such that:
+    * arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
+    * arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
+    
+![App Screenshot](utils/mountainArray.JPG)
+
+Test case 1
+```
+Input: arr = [2,1]
+Output: false
+```
+Test case 2
+```
+Input: arr = [3,5,5]
+Output: false
+```
+##### Solution [Code](code/valid_mountain.py)
+We can use two pointers for this problem one starting from left and one from right. We loop over the entire array
+and increase the left index when arr[left+1]>index[left] and decrease the right index by one when arr[right-1]>index[right].
+At the end when left is equal to right and both are not zero, it is a valid mountain array. We do not want 
+either left or right to be zero at the end because it means that the values did not increase.
+
+```python
+class Solution:
+    def validMountainArray(self, arr) -> bool:
+        # start a left pointer and a right pointer
+        left, right=0,len(arr)-1
+        # loop over each element in the array
+        for i in range(len(arr)):
+            # if the array is increasing from left, increase the left by one
+            if arr[left+1]>arr[left]:
+                left+=1
+            # if the array is increasing from right, decrease the right by one
+            if arr[right-1]>arr[right]:
+                right-=1
+        # if left and right are the same and are not zero, it is a valid mountain
+        return left==right and not (left==0 or right==0)
+
+# test #1
+arr = [0,3,2,1]
+result=Solution()
+print(result.validMountainArray(arr))
+
+# test #2
+arr=[2,1]
+result=Solution()
+print(result.validMountainArray(arr))
+
+# test #3
+arr=[3,5,5]
+result=Solution()
+print(result.validMountainArray(arr))
+```
+## Next Steps
+
+This file will continuously be updated.
+
