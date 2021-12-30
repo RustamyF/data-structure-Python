@@ -16,6 +16,7 @@ Since Array is a data structure, we should be comfortable to know how perform th
 - Delete 
 - Update
 - Search
+
 The main operations with arrays are adding elements to them and reading elements from them. Every other operation is built on top of these two methods.
 #### 1. Accessing an element in Array
 to access and element in the array is quite simple. We just point to the index i of the array and the element will be returned to us.
