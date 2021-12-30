@@ -145,9 +145,9 @@ Test case 2
 Input: nums = [1,0,1,1,0,1]
 Output: 2
 ```
-##### Solution [Code](code/max_conse_ones.py)
+##### Solution [Code](code/max_consec_ones.py)
 We can solve this problem by passing through every element in the array and keeping track of the
-maximum number of consecutive ones. The following sinpit shows the python solution.
+maximum number of consecutive ones. The following snipped shows the python solution.
 ```python
 class Solution:
     def findMaxConsecutiveOnes(self, nums) -> int:
@@ -167,4 +167,101 @@ class Solution:
 result=Solution()
 array=[1,1,0,1,1,1]
 print(result.findMaxConsecutiveOnes(array))
+```
+
+#### 2. Find Numbers with Even Number of Digits
+Given an array nums of integers, return how many of them contain an even number of digits..
+Test case 1
+```
+Input: nums = [12,345,2,6,7896]
+Output: 2
+Explanation: 
+12 contains 2 digits (even number of digits). 
+345 contains 3 digits (odd number of digits). 
+2 contains 1 digit (odd number of digits). 
+6 contains 1 digit (odd number of digits). 
+7896 contains 4 digits (even number of digits). 
+Therefore only 12 and 7896 contain an even number of digits.
+```
+Test case 2
+```
+Input: nums = [555,901,482,1771]
+Output: 1 
+Explanation: 
+Only 1771 contains an even number of digits.
+```
+##### Solution [Code](code/find_number_of_evens.py)
+The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
+and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.
+```python
+class Solution:
+    def findNumbers(self, nums):
+        # Start the counter from zero
+        count=0
+        # loop over each element in the bytearray
+        for num in nums:
+            # convert the number to a string and divid its length to 2.
+            if len(str(num))%2==0:
+                # if the remainder is equal to zero, increase the counter by one.
+                count+=1
+        return count
+result=Solution()
+
+# test 1
+array=[12,345,2,6,7896]
+print(result.findNumbers(array))
+
+# test 2
+array=[555,901,482,1771]
+print(result.findNumbers(array))
+```
+
+#### 2. Duplicate Zeros
+Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.
+
+Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+```
+Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+```
+Test case 2
+```
+Input: arr = [1,2,3]
+Output: [1,2,3]
+Explanation: After calling your function, the input array is modified to: [1,2,3]
+```
+##### Solution [Code](code/duplicate_zeros.py)
+The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
+and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.
+```python
+class Solution:
+    def duplicateZeros(self, nums):
+        i = 0
+        # loop over every element in the array
+        while i<len(nums)-1:
+            # if the element is zero, shift all the element to the right by one.
+            if nums[i]==0:
+                # shift all the element to the right by one
+                for j in reversed(range(i,len(nums)-1)):
+                    nums[j+1]=nums[j]
+                # now that everything to the right is shifted, add a zero
+                nums[i+1]=0
+                # increase the step by one
+                i+=1
+            i+=1
+        return nums
+
+
+result=Solution()
+
+# test 1
+array=[1,0,2,3,0,4,5,0]
+print(result.duplicateZeros(array))
+
+# test 2
+array=[1,2,3]
+print(result.duplicateZeros(array))
 ```
