@@ -59,7 +59,12 @@ Since Array is a data structure, we should be comfortable to know how perform th
 
 
 #### 1. Printing the list
-
+The process starts by assigning a temporary external reference **temp**  to
+point to the head of the linked-list. Then we start a while loop and 
+the value stored in the first node is printed by accessing the data component
+stored in the node using the external reference. The external reference is then
+advanced to the next node by assigning it the value of the **temp**  link field.
+ The loop iteration continues until every node in the list has been accessed or **temp** is None.
 
 ```python
 def print_list(self):
@@ -73,6 +78,43 @@ def print_list(self):
         temp=temp.next
 ```
 #### 2. - Insert
+Inserting an element to an array takes many forms:
+- inserting at an arbitrary location in the linked-list.
+- appending the linked-list.
+- prepending the linked-list.
+
+We create three methods for each of the insert operations listed above. Inserting an element at an index
+is a O(n) operation at the most. We do not have to shift the elements to the right as we had to for the array
+insert operation. 
+
+```python
+def insert_by_index(self, index, data):
+    # initiate the new node using the new data
+    new_node = ListNode(data)
+    # check if index is below zero
+    if index<0:
+        return False
+    # check if the new node is a prepend
+    if index==0:
+        new_node.next=self.head
+        self.head=new_node
+        return
+    # get the node before using the get() method
+    temp=self.get(index-1)
+    # check to see if it is a tail node
+    if temp.next==self.tail:
+        self.tail.next=new_node
+        self.tail=new_node
+    else:
+        # call the node where the current index exist as **after**
+        after=temp.next
+        # connect the temp node to new node
+        temp.next=new_node
+        # connect the new_node to after node
+        new_node.next=after
+ ```
+
+Appending and pre-pending a linked-list is simple as far as we track the **head** and **tail** nodes. 
 
 ```python
 def insert_tail(self,data):
@@ -88,21 +130,26 @@ def insert_tail(self,data):
         self.tail=new_node
 def insert_head(self,data):
     # initiate the new node using the new data
-    new_node=ListNode(data)
-    # if there is no head, create the head node
+    new_node = ListNode(data)
+    # if there is not head, create the head node
     if self.head is None:
         self.head=new_node
         self.tail=new_node
-    # if it is not the head node, point the new node to head and change the head to new node
+    # if it is not the head node, point the tail to the new node and change tail
     else:
         new_node.next=self.head
         self.head=new_node
 ```
 
+
 #### 3. Search
+A linear search operation can be performed on a linked-list just the same way as the arrays.
+ It is very similar to the way we printed the values of linked-list earlier. 
+ The only difference is that the loop can terminate
+early if we find the target value within the list.
 
+![App Screenshot](utils/search.JPG)
 
-![App Screenshot](utils/search.JPG
 ```python
 def search(self, data):
     # start from the head of linked-list

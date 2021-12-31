@@ -30,15 +30,40 @@ class linked_list:
             self.tail=new_node
     def insert_head(self,data):
         # initiate the new node using the new data
-        new_node=ListNode(data)
-        # if there is no head, create the head node
+        new_node = ListNode(data)
+        # if there is not head, create the head node
         if self.head is None:
-            self.head=new_node
-            self.tail=new_node
-        # if it is not the head node, point the new node to head and change the head to new node
+            self.head = new_node
+            self.tail = new_node
+        # if it is not the head node, point the tail to the new node and change tail
         else:
+            new_node.next = self.head
+            self.head = new_node
+    def insert_by_index(self, index, data):
+        # initiate the new node using the new data
+        new_node = ListNode(data)
+        # check if index is below zero
+        if index<0:
+            return False
+        # check if the new node is a prepend
+        if index==0:
             new_node.next=self.head
             self.head=new_node
+            return
+        # get the node before using the get() method
+        temp=self.get(index-1)
+        # check to see if it is a tail node
+        if temp.next==self.tail:
+            self.tail.next=new_node
+            self.tail=new_node
+        else:
+            # call the node where the current index exist as **after**
+            after=temp.next
+            # connect the temp node to new node
+            temp.next=new_node
+            # connect the new_node to after node
+            new_node.next=after
+
     def search(self, data):
         # start from the head of linked-list
         temp=self.head
@@ -65,6 +90,7 @@ class linked_list:
             temp=temp.next
         # return the node value
         return temp
+
     def delete(self, index):
         # check if head is None or index is below zero
         if self.head is None and index<0:
@@ -96,14 +122,15 @@ ll=[4,5,4,4]
 
 
 my_list=linked_list(5)
-my_list.insert_tail(4)
+my_list.insert_by_index(0,4)
 my_list.insert_head(4)
 my_list.insert_tail(4)
 my_list.insert_tail(6)
+my_list.insert_by_index(1,30)
 
-my_list.delete(2)
+# my_list.delete(2)
 
-my_list.update(1,10)
+# my_list.update(1,10)
 
 my_list.print_list()
 # print(my_list.search(6))
