@@ -6,7 +6,7 @@ in python language.
 ## Roadmap
 This repo presents the following data structure from foundation to advanced level.
 - [Arrays](Arrays/README.md)
-- Linked List
+- [Linked List](linked_list/README.md)
 - Hash Table
 - Stack and Queue
 - Binary and Binary Search Trees
