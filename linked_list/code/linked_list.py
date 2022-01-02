@@ -106,19 +106,50 @@ class linked_list:
             self.tail=temp
         else:
             temp.next=temp.next.next
-
+    def remove(self, data):
+        # check if head is None
+        if self.head is None:
+            return False
+        before=ListNode(0)
+        temp=self.head
+        before.next = temp
+        while temp:
+            if temp.data==data:
+                if temp==self.head:
+                    self.head=self.head.next
+                    temp=self.head
+                    before.next=temp
+                else:
+                    temp=temp.next
+                    before.next=temp
+            else:
+                before=temp
+                temp = temp.next
+        self.tail=before
     def update(self, index, data):
         # get the element using its index and get() method
         temp=self.get(index)
         # change its data
         temp.data=data
 
-
-
-
-
-
-ll=[4,5,4,4]
+    def reverse(self):
+        # let the left node be None and initiate temp and right at head
+        left = None
+        temp = self.head
+        right = self.head
+        # loop over the linked-list as long as right is not None
+        while right:
+            # move the right one step
+            right = right.next
+            # point the node to the left
+            temp.next = left
+            # move left to the current node
+            left = temp
+            # move the current node to the right
+            temp = right
+        # finaly, change the head and tail
+        self.head = self.tail
+        self.tail = self.head
 
 
 my_list=linked_list(5)
@@ -131,8 +162,16 @@ my_list.insert_by_index(1,30)
 # my_list.delete(2)
 
 # my_list.update(1,10)
-
+# print('original list')
+# my_list.print_list()
+# my_list.reverse()
+# print('reversed list')
+# my_list.print_list()
+my_list.remove(4)
 my_list.print_list()
+print('the head value is',my_list.head.data)
+print('the tail value is',my_list.tail.data)
+
 # print(my_list.search(6))
 # print(my_list.get(2))
 

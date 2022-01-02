@@ -165,6 +165,9 @@ def search(self, data):
     return False
 ```
 #### 4. get
+get operation will return the node with a certian index. For that we take a loop over the linked-list
+until we reach to the index node. We will have to check certian edge cases like if head nod is None or
+index provided is zero or larger than the length of the linked-list. The following code shows the get method.
 ```python
 def get(self, index):
     # check if head is None or index is below zero
@@ -183,7 +186,9 @@ def get(self, index):
     
 ```
 #### 5. Delete
-
+Deleting a node by its index requires us to find the node just before the node that we want to delete. For that
+ we can use the get() operation we defined before. Once we find that, we can just connect it to the the
+  node after the one that we want to delete. Be mindful of certian edge cases while doing that.
 ![App Screenshot](utils/search.JPG)
 ```python
 def delete(self, index):
@@ -204,7 +209,8 @@ def delete(self, index):
         
 ```
 #### 6. Update
-
+Updating a node in a linked-list requires us to find the element first. We can do that using the get() method
+we defined earlier. Then we just replace its data with the new data.
 ```python
 def update(self, index, data):
     # get the element using its index and get() method
@@ -214,16 +220,124 @@ def update(self, index, data):
     
 ```
 ## Examples problems with linked-list
-
+We can use the one pointer and two pointer methods that we used for the array to solve problems related to
+linked-list as well. Just be mindful the linked-list flow.
 
 #### 1. Design a linked-list data structure
+Design a linked-list data structure that contains all essential methods. Please take a look at this [code](code/linked_list.py)
+ for the solution. This solution is long, so I will not include it in the readme here.
 
 ##### Solution [Code](code/linked_list.py)
+#### 3.Reverse a linked-list 
+Problem Description: Given the head of a singly linked list, reverse the list, and return the reversed list.
 
+##### Solution [Code](code/linked_list.py)
+With reversed linked-list we want the direction of next to reverse backward. We will use three pointers to 
+solve the problem in linear fashion: left node, right node and the node itself. We change the direction from
+right to left as the following code. The solution is part of the [linked-list](code/linked_list.py) class 
+defined earlier, so the values of head and tail is given to us from that.
+```python
+def reverse(self):
+    # let the left node be None and initiate temp and right at head
+    left=None
+    temp=self.head
+    right=self.head
+    # loop over the linked-list as long as right is not None
+    while right:
+        # move the right one step
+        right = right.next
+        # point the node to the left
+        temp.next=left
+        # move left to the current node
+        left=temp
+        # move the current node to the right
+        temp=right
+    # finaly, change the head and tail
+    self.head=self.tail
+    self.tail=self.head
+```
 
-#### 2. 
+#### 3. Linked List Cycle
+Problem Description: Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following 
+the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+Return true if there is a cycle in the linked list. Otherwise, return false.
 
-##### Solution [Code](code/find_number_of_evens.py)
+Test case 1
+```
+Input: head = [3,2,0,-4], pos = 1
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).  
+```
+Test case 2
+```
+Input: head = [1,2], pos = 0
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 0th node. 
+```
+Test case 3
+```
+Input: head = [1], pos = -1
+Output: false
+Explanation: There is no cycle in the linked list. 
+```
+##### Solution [Code](code/ll_cycle.py)
+We can use this question using two methods:
+1. Using hash set. We perform a linear search over each element and add each node to the hash set. If 
+the element was in the set, it means we circled back to the element and therefore, it is a circular linked-list.
+2. The second method is using two pointers. One is fast and jumps two steps at a time. The other one is slow and steps
+one at a time. These two would eventually meet, and if they do, the linked-list is circular.
+
+In the following, we create two functions using both methods.
+
+```python
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+class Solution:
+    def hasCycle(self, head) -> bool:
+        q=set()
+        temp=head
+        while temp is not None:
+            if temp in q:
+                return True, temp.val
+            q.add(temp)
+            temp=temp.next
+        return False
+    def hasCycle2(self, head) -> bool:
+        slow=head
+        fast=head
+        while slow and fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+            if slow==fast:
+                return True, slow.val
+        return False
+# test 1#
+# Construct the list
+a, b, c, d=ListNode(3), ListNode(2), ListNode(0), ListNode(-4)
+a.next=b;  b.next=c; c.next=d; d.next=b; head=a
+
+result=Solution()
+print(result.hasCycle(head))
+
+# test 2#
+# Construct the list
+a, b=ListNode(1), ListNode(2)
+a.next=b;  b.next=a; head=a
+result=Solution()
+print(result.hasCycle(head))
+
+# test 3#
+# Construct the list
+a=ListNode(1)
+head=a
+result=Solution()
+print(result.hasCycle(head))
+```
 
 #### 3.
 
