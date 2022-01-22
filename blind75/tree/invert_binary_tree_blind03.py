@@ -47,13 +47,16 @@ class Solution:
             stack.append(node.left)
             stack.append(node.right)
         return root
+    def print_tree(self, root):
+        stack=[]
+        stack.append(root)
+        while stack:
+            node=stack.pop(0)
+            if node is not None:
+                print(node.val)
+                stack.append(node.right)
+                stack.append(node.left)
 
-    def print_tree(self,root):
-        if root is None:
-            return None
-        print(root.val)
-        self.print_tree(root.left)
-        self.print_tree(root.right)
 
 
 
