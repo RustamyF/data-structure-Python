@@ -21,6 +21,8 @@ Example 3:
 Input: nums = [1,2,3]
 Output: 3
 """
+
+
 class Solution:
     def rob(self, nums) -> int:
         if len(nums) == 1:
