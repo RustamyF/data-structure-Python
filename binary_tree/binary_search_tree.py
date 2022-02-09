@@ -89,42 +89,74 @@ class BinarySearchTree:
         return results
 
     def DFS_preorder(self):
-        pass
+        results = []
+        if self.root is None:
+            return None
+        def preorder(root):
+            results.append(root.data)
+            if root.left is not None:
+                preorder(root.left)
+            if root.right is not None:
+                preorder(root.right)
+        preorder(self.root)
+        return results
 
     def DFS_postorder(self):
-        pass
+        results = []
+        if self.root is None:
+            return None
+        def postorder(root):
+            if root.left is not None:
+                postorder(root.left)
+            if root.right is not None:
+                postorder(root.right)
+            results.append(root.data)
+        postorder(self.root)
+        return results
 
     def DFS_inorder(self):
-        pass
+        if self.root is None:
+            return None
+        results=[]
+        def inorder(root):
+            if root.left is not None:
+                inorder(root.left)
+            results.append(root.data)
+            if root.right is not None:
+                inorder(root.right)
+        inorder(self.root)
+        return results
 
 
-
-
-
-
-
-
-
-
-
+""" Example tree
+          3
+        1   4
+      0   2
+"""
 
 my_tree = BinarySearchTree()
-my_tree.insert(4)
 my_tree.insert(3)
-my_tree.insert(8)
 my_tree.insert(1)
+my_tree.insert(0)
+my_tree.insert(4)
+my_tree.insert(2)
+
+print('value at the root is:', my_tree.root.data)
+print('value at the left of root is:', my_tree.root.left.data)
+print('value at the right of root is:',my_tree.root.right.data)
+
+print('value at the left of left of root is:',my_tree.root.left.left.data)
+
+print('contain value 5:', my_tree.contain(5))
+print('min value in tree', my_tree.min_value_node(my_tree.root).data)
+
+print('Depth first search:', my_tree.BFS())
+print('DFS inorder:', my_tree.DFS_inorder())
+print('DFS preorder:', my_tree.DFS_preorder())
+print('DFS postorder:', my_tree.DFS_postorder())
 
 
-print(my_tree.root.data)
-print(my_tree.root.left.data)
-print(my_tree.root.right.data)
 
-print(my_tree.root.left.left.data)
-
-print(my_tree.contain(5))
-print(my_tree.min_value_node(my_tree.root).data)
-
-print(my_tree.BFS())
 
 
 
