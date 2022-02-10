@@ -7,9 +7,9 @@ in python language.
 This repo presents the following data structure from foundation to advanced level.
 - [Arrays](Arrays/README.md)
 - [Linked List](linked_list/README.md)
+- [Binary and Binary Search Trees](binary_tree/README.md)
 - Hash Table
 - Stack and Queue
-- Binary and Binary Search Trees
 - Graphs
 
 

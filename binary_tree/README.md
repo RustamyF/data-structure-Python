@@ -1,4 +1,4 @@
-# Linked List
+# Binary and binary search trees
 
 ## Introduction
 Binary trees are another powerful data structure that can be used to store a collection of data. It allows
