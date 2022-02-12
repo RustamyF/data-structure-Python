@@ -18,6 +18,7 @@ a = ListNode( 4 )
 When we call the ListNode class with a data point 4, we get something like the following figure. A single node with two
 arrows pointing to left and right nodes. Since this is the first node of our tree data structure, it is typically called 
 the root of the tree, and from here, we create branches for the tree.
+
 ![App Screenshot](utils/tree_node.JPG)
 
 The left and right arrows are pointing at None, meaning that there is no other nodes in our data structure
@@ -48,6 +49,7 @@ c.right = g
 ```
 The tree data structure will look the following figure. The last nodes in the tree data structure is typically called 
 the leaf node which is represeted using leaf shapes in the figure.
+
 ![App Screenshot](utils/leaf.JPG)
 And this is how a tree data structure is built. For the rest of this document, we design a binary search tree data 
 structure that supports insert, contain, minimum methods. We will also describe the concepts of tree traversals methods.

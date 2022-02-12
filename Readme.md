@@ -5,9 +5,9 @@ in python language.
 
 ## Roadmap
 This repo presents the following data structure from foundation to advanced level.
-- [Arrays](Arrays/README.md)
-- [Linked List](linked_list/README.md)
-- [Binary and Binary Search Trees](binary_tree/README.md)
+- [Arrays](Arrays)
+- [Linked List](linked_list)
+- [Binary and Binary Search Trees](binary_tree)
 - Hash Table
 - Stack and Queue
 - Graphs
