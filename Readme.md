@@ -1,3 +1,4 @@
+![Tests](https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/actions/workflows/tests.yml/badge.svg)
 # Data Structures in Python
 
 I created this repository to give a good and easy representation of data structures

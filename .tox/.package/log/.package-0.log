@@ -1,4 +1,0 @@
-action: .package, msg: getenv
-cwd: C:\Users\abr415\PycharmProjects\DataStructures\data-structure-Python\.tox
-cmd: 'c:\users\abr415\appdata\local\continuum\anaconda3\envs\pycharm\python.exe' -m virtualenv --no-download --python 'c:\users\abr415\appdata\local\continuum\anaconda3\envs\pycharm\python.exe' .package
-FileNotFoundError: [Errno 2] No such file or directory: 'c:\\users\\abr415\\appdata\\local\\continuum\\anaconda3\\envs\\pycharm\\Lib\\venv\\scripts\\nt\\python.exe'
