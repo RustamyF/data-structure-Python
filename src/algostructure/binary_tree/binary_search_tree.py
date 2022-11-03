@@ -92,6 +92,7 @@ class BinarySearchTree:
         results = []
         if self.root is None:
             return None
+
         def preorder(root):
             results.append(root.data)
             if root.left is not None:
