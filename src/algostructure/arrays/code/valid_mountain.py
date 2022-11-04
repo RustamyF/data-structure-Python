@@ -14,32 +14,19 @@ and increase the left index when arr[left+1]>index[left] and decrease the right 
 At the end when left is equal to right and both are not zero, it is a valid mountain array. We do not want
 either left or right to be zero at the end because it means that the values did not increase.
 """
+
+
 class Solution:
     def validMountainArray(self, arr) -> bool:
         # start a left pointer and a right pointer
-        left, right=0,len(arr)-1
+        left, right = 0, len(arr) - 1
         # loop over each element in the array
         for i in range(len(arr)):
             # if the array is increasing from left, increase the left by one
-            if arr[left+1]>arr[left]:
-                left+=1
+            if arr[left + 1] > arr[left]:
+                left += 1
             # if the array is increasing from right, decrease the right by one
-            if arr[right-1]>arr[right]:
-                right-=1
+            if arr[right - 1] > arr[right]:
+                right -= 1
         # if left and right are the same and are not zero, it is a valid mountain
-        return left==right and not (left==0 or right==0)
-
-# test #1
-arr = [0,3,2,1]
-result=Solution()
-print(result.validMountainArray(arr))
-
-# test #2
-arr=[2,1]
-result=Solution()
-print(result.validMountainArray(arr))
-
-# test #3
-arr=[3,5,5]
-result=Solution()
-print(result.validMountainArray(arr))
+        return left == right and not (left == 0 or right == 0)
