@@ -1,4 +1,5 @@
 ![Tests](https://github.com/RustamyF/data-structure-Python/actions/workflows/test.yml/badge.svg)
+![Tests](https://github.com/RustamyF/data-structure-Python/actions/workflows/docs.yml/badge.svg)
 
 
 # Data Structures in Python
