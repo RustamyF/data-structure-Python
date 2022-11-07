@@ -1,0 +1,1108 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Arrays - Algostructure Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arrays" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Algostructure Docs" class="md-header__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algostructure Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arrays
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algostructure Docs" class="md-nav__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Algostructure Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Data Structures in Python
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Arrays
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Arrays
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-an-element-in-array" class="md-nav__link">
+    1. Accessing an element in Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adding-an-element-to-array" class="md-nav__link">
+    2. Adding an element to Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deleting-an-element-from-array" class="md-nav__link">
+    3. Deleting an element from Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-searching-an-element-in-array" class="md-nav__link">
+    4. Searching an element in Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-problems-with-arrays" class="md-nav__link">
+    Examples problems with Arrays
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples problems with Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-max-consecutive-ones" class="md-nav__link">
+    1. Max Consecutive Ones
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Max Consecutive Ones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-find-numbers-with-even-number-of-digits" class="md-nav__link">
+    2. Find Numbers with Even Number of Digits
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Find Numbers with Even Number of Digits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_1" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-duplicate-zeros" class="md-nav__link">
+    3. Duplicate Zeros
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Duplicate Zeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_2" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-merge-sorted-array" class="md-nav__link">
+    4. Merge Sorted Array
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Merge Sorted Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_3" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-valid-mountain-array" class="md-nav__link">
+    5. Valid Mountain Array
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Valid Mountain Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_4" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked-list/" class="md-nav__link">
+        Linked List
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binary-tree/" class="md-nav__link">
+        Binary and binary search trees
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack-and-queue/" class="md-nav__link">
+        Stack and queue
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash-table/" class="md-nav__link">
+        Hash table
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-accessing-an-element-in-array" class="md-nav__link">
+    1. Accessing an element in Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adding-an-element-to-array" class="md-nav__link">
+    2. Adding an element to Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deleting-an-element-from-array" class="md-nav__link">
+    3. Deleting an element from Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-searching-an-element-in-array" class="md-nav__link">
+    4. Searching an element in Array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-problems-with-arrays" class="md-nav__link">
+    Examples problems with Arrays
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples problems with Arrays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-max-consecutive-ones" class="md-nav__link">
+    1. Max Consecutive Ones
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Max Consecutive Ones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-find-numbers-with-even-number-of-digits" class="md-nav__link">
+    2. Find Numbers with Even Number of Digits
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Find Numbers with Even Number of Digits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_1" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-duplicate-zeros" class="md-nav__link">
+    3. Duplicate Zeros
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Duplicate Zeros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_2" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-merge-sorted-array" class="md-nav__link">
+    4. Merge Sorted Array
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Merge Sorted Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_3" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-valid-mountain-array" class="md-nav__link">
+    5. Valid Mountain Array
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Valid Mountain Array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_4" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="arrays">Arrays</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Arrays are one of the simplest and basic data structure that exists in all programing languages
+ which is used for storing similar items in the memory. Arrays can be one-dimensional or multi-dimensional.
+ The elements in Arrays are stored in contiguous bytes of memory and allows for random access to the individual elements.
+ Each element of an Array is indexed starting from 0 as shown bellow.</p>
+<p><img alt="App Screenshot" src="../utils/Capture.JPG" /></p>
+<p>Since Array is a data structure, we should be comfortable to know how perform these operations in the Arrays:</p>
+<ul>
+<li>
+<p><a href="#access-element">Accessing elements</a></p>
+</li>
+<li>
+<p><a href="#add-element">Insert</a></p>
+</li>
+<li>
+<p><a href="#delete-element">Delete</a></p>
+</li>
+<li>
+<p><a href="#update-element">Update</a></p>
+</li>
+<li>
+<p><a href="#search-element">Search</a></p>
+</li>
+</ul>
+<p>The main operations with arrays are adding elements to them and reading elements from them. Every other operation is built on top of these two methods.</p>
+<div id="access-element"/>
+
+<h4 id="1-accessing-an-element-in-array">1. Accessing an element in Array</h4>
+<p>to access and element in the array is quite simple. We just point to the index i of the array and the element will be returned to us.
+For example, we have an array with [1, 'dog', 'cat', 5] and we want to to access
+the element in index 0 and index 2, we use:</p>
+<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5]
+&gt;&gt;&gt; array[0]
+1
+&gt;&gt;&gt; array[2]
+'cat'
+</code></pre>
+<div id="add-element"/>
+
+<h4 id="2-adding-an-element-to-array">2. Adding an element to Array</h4>
+<p>There are many ways of inserting an element to an Array:
+1. Inserting a new element at the end of the Array.
+1. Inserting a new element at the beginning of the Array.
+1. Inserting a new element at any given index inside the Array</p>
+<p>Adding an element at the end of an array is easy. We can use the <strong>append()</strong> method to add new elements at the end of  Array.
+We can also just add the new element to the array as a list.</p>
+<pre><code class="language-python">&gt;&gt;&gt; array.append(6)
+&gt;&gt;&gt; array
+[1, 'dog', 'cat', 5, 6]
+
+&gt;&gt;&gt; array=array+['sky']
+&gt;&gt;&gt; array
+[1, 'dog', 'cat', 5, 6, 'sky']
+</code></pre>
+<p>Adding an element at the start or anywhere in the array is more complicated because all other indexes needs to change as well.
+This is one of the flaws of Array data structure that adding and deleting and element is not efficient. The following code sniped shows
+the method of adding a new element at a specified index to an array.</p>
+<pre><code class="language-python">array=[1, 'dog', 'cat', 5, 6, 'sky']
+def insert(index, value):
+    # First, we will have to create space for a new element.
+    array.append(0)
+    # then shift all the elements to the right from the index location
+    for i in range(index,len(array)-1,-1):
+        array[i+1]=array[i]
+    # Finally assign the value of index
+    array[index]=value
+insert(0,'hi')
+print(array)
+</code></pre>
+<p>Python has a built-in function that does this for us using <strong>array.insert(index,value)</strong> method.</p>
+<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5, 6, 'sky']
+&gt;&gt;&gt; array.insert(0,'hi')
+&gt;&gt;&gt; array
+['hi', 1, 'dog', 'cat', 5, 6, 'sky']
+</code></pre>
+<div id="delete-element"/>
+
+<h4 id="3-deleting-an-element-from-array">3. Deleting an element from Array</h4>
+<p>Just like the insert method, deleting an element from an array requires changing the indexes of other elements unless it
+is the last element of an array. Python has three built-in methods that can be used to delete an element 
+from an array:
+- <strong>array.pop(index)</strong>: This method removes the element with a specific index from an array and returns the removed element.
+- <strong>array.remove(value)</strong>: This method removes the first matching element (which is passed as an argument) from the list. If there are multiple element of the
+same value in an array, this method removes only the first one.
+- <strong>del array[index]</strong>: This method deletes an element from an array without return anything.</p>
+<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5, 6, 'sky']
+&gt;&gt;&gt; array.pop(2)
+'cat'
+&gt;&gt;&gt; array
+[1, 'dog', 5, 6, 'sky']
+
+&gt;&gt;&gt; array.remove('sky')
+&gt;&gt;&gt; array
+[1, 'dog', 5, 6]
+
+&gt;&gt;&gt; del array[0]
+&gt;&gt;&gt; array
+['dog', 5, 6]
+</code></pre>
+<div id="search-element"/>
+
+<h4 id="4-searching-an-element-in-array">4. Searching an element in Array</h4>
+<p>Speed of searching is one of the most important  operation that makes the programmers decide what data structure to use for the problem to be solved with.
+Searching means to find an occurrence of a particular element in the Array and return its position. We might need to search an Array to find out whether or not 
+an element is present in the Array. We might also want to search an Array that is arranged in a specific fashion to determine which index to insert a new element at.
+* Linear search: In this method we look every element of an array one by one until we find that element and return its index. The following code snippet will perform linear search 
+and return the index of the element that is equal to the value we are searching and prints "this element does not exist" when there is not such element in the array.</p>
+<pre><code class="language-python">def search(value):
+    for index, val in enumerate(array):
+        if val==value:
+            return index
+    return &quot;this element does not exist&quot;
+</code></pre>
+<ul>
+<li>Binary Search</li>
+</ul>
+<p>This method reduces time complexity of search to log(n) when the elements in the array are sorted. This algorithm will not work if the array is not sorted.
+Binary search divides the array into half and checks if the middle element is bigger than the target value or smaller. If it was bigger, it will take the ride side of the mid point and repeats this process untill
+the values is found.</p>
+<pre><code class="language-python">array=[1,3,5,7,9,10]
+def binary_search(value):
+    # initiate left and right pointers
+    left, right=0, len(array)-1
+    while left&lt;=right:
+        # find the mid-point index
+        mid=(left+right)//2
+        # check if the mid-point index is equal to the target value
+        if value==array[mid]:
+            return mid
+        # If target value is bigger than the mid-point element, change the left index to mid+1
+        elif value&gt;array[mid]:
+            left=mid+1
+        # Otherwise, bring the right pointer to the mid-1
+        else:
+            right=mid-1
+    # if the element does not exist, print the following
+    return &quot;this element does not exist&quot;
+</code></pre>
+<h2 id="examples-problems-with-arrays">Examples problems with Arrays</h2>
+<p>When solving array problems, there are two most popular methods that can be used to tackle the problem:
+1. The first one is the one pointer or linear search. This is a basic approach and can solve a lots of array problem.
+2. The second method is the two pointer. This is a very powerful method where within the same loop, instead
+of using one pointer, you can keep track of two pointers. These pointers can go at the same direction or the oposite direction.
+The following example problems will explain the concept of one pointer and two pointer search methods.</p>
+<h4 id="1-max-consecutive-ones">1. Max Consecutive Ones</h4>
+<p>Given a binary array nums, return the maximum number of consecutive 1's in the array.
+Test case 1</p>
+<pre><code>Input: nums = [1,1,0,1,1,1]
+Output: 3
+Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: nums = [1,0,1,1,0,1]
+Output: 2
+</code></pre>
+<h5 id="solution-code">Solution <a href="code/max_consec_ones.py">Code</a></h5>
+<p>We can solve this problem by passing through every element in the array and keeping track of the
+maximum number of consecutive ones. The following snipped shows the python solution.</p>
+<pre><code class="language-python">class Solution:
+    def findMaxConsecutiveOnes(self, nums) -&gt; int:
+        # initiate a current max and maximum of the maximum values
+        curmax, maximum=0, 0
+        for i in range(len(nums)):
+            # when the element is 1, increase the current max by one
+            if nums[i]==1:
+                curmax+=1
+            # When the element is not 1, make the current max 0
+            else:
+                curmax=0
+            # keep track of the maximum of them
+            maximum=max(maximum,curmax)
+        return maximum
+
+result=Solution()
+array=[1,1,0,1,1,1]
+print(result.findMaxConsecutiveOnes(array))
+</code></pre>
+<h4 id="2-find-numbers-with-even-number-of-digits">2. Find Numbers with Even Number of Digits</h4>
+<p>Given an array nums of integers, return how many of them contain an even number of digits..
+Test case 1</p>
+<pre><code>Input: nums = [12,345,2,6,7896]
+Output: 2
+Explanation: 
+12 contains 2 digits (even number of digits). 
+345 contains 3 digits (odd number of digits). 
+2 contains 1 digit (odd number of digits). 
+6 contains 1 digit (odd number of digits). 
+7896 contains 4 digits (even number of digits). 
+Therefore only 12 and 7896 contain an even number of digits.
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: nums = [555,901,482,1771]
+Output: 1 
+Explanation: 
+Only 1771 contains an even number of digits.
+</code></pre>
+<h5 id="solution-code_1">Solution <a href="code/find_number_of_evens.py">Code</a></h5>
+<p>The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
+and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.</p>
+<pre><code class="language-python">class Solution:
+    def findNumbers(self, nums):
+        # Start the counter from zero
+        count=0
+        # loop over each element in the bytearray
+        for num in nums:
+            # convert the number to a string and divid its length to 2.
+            if len(str(num))%2==0:
+                # if the remainder is equal to zero, increase the counter by one.
+                count+=1
+        return count
+result=Solution()
+
+# test 1
+array=[12,345,2,6,7896]
+print(result.findNumbers(array))
+
+# test 2
+array=[555,901,482,1771]
+print(result.findNumbers(array))
+</code></pre>
+<h4 id="3-duplicate-zeros">3. Duplicate Zeros</h4>
+<p>Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.</p>
+<p>Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.</p>
+<pre><code>Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: arr = [1,2,3]
+Output: [1,2,3]
+Explanation: After calling your function, the input array is modified to: [1,2,3]
+</code></pre>
+<h5 id="solution-code_2">Solution <a href="code/duplicate_zeros.py">Code</a></h5>
+<p>The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
+and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.</p>
+<pre><code class="language-python">class Solution:
+    def duplicateZeros(self, nums):
+        i = 0
+        # loop over every element in the array
+        while i&lt;len(nums)-1:
+            # if the element is zero, shift all the element to the right by one.
+            if nums[i]==0:
+                # shift all the element to the right by one
+                for j in reversed(range(i,len(nums)-1)):
+                    nums[j+1]=nums[j]
+                # now that everything to the right is shifted, add a zero
+                nums[i+1]=0
+                # increase the step by one
+                i+=1
+            i+=1
+        return nums
+
+
+result=Solution()
+
+# test 1
+array=[1,0,2,3,0,4,5,0]
+print(result.duplicateZeros(array))
+
+# test 2
+array=[1,2,3]
+print(result.duplicateZeros(array))
+</code></pre>
+<h4 id="4-merge-sorted-array">4. Merge Sorted Array</h4>
+<p>Problem statement:
+You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, 
+representing the number of elements in nums1 and nums2 respectively.</p>
+<p>Merge nums1 and nums2 into a single array sorted in non-decreasing order.</p>
+<p>The final sorted array should not be returned by the function, but instead be stored inside the array 
+nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that 
+should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.</p>
+<p>Test case 1</p>
+<pre><code>Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: nums1 = [1], m = 1, nums2 = [], n = 0
+Output: [1]
+Explanation: The arrays we are merging are [1] and [].
+The result of the merge is [1].
+</code></pre>
+<h5 id="solution-code_3">Solution <a href="code/merge_sorted_array.py">Code</a></h5>
+<p>The problem can be solved an easy way using sorted function in python. We take the slice of nums1 from 0 to m and 
+combine it with nums2 and return the sorted result. I can be done in one line of code. Here we are using a built in
+function of python. What if we are not allowed to use built-in functions? The second method is created to solve the 
+problem using two pointer algorithm. It is a little hard, but if we track our pointers, we can solve it.</p>
+<pre><code class="language-python">class Solution:
+    def merge_easy(self, nums1, m, nums2, n) -&gt; None:
+        return sorted(nums1[:m]+nums2)
+    def merge(self,nums1, m, nums2, n):
+        # copy the non zero elements from nums1
+        copy = nums1[:m]
+        # create two pointers one for nums1 and one for nums2
+        l1 = 0
+        l2 = 0
+        # Compare elements from nums1Copy and nums2 and write the smallest to nums1.
+        for p in range(n + m):
+            # We also need to ensure that l1 and l2 aren't over the boundaries
+            # of their respective arrays.
+            if l2 &gt;= n or (l1 &lt; m and copy[l1] &lt;= nums2[l2]):
+                nums1[p] = copy[l1]
+                l1 += 1
+            else:
+                nums1[p] = nums2[l2]
+                l2 += 1
+        return nums1
+result=Solution()
+
+# test #1
+nums1, m = [1,2,3,0,0,0], 3
+nums2, n = [2,5,6], 3
+print(result.merge(nums1, m, nums2, n))
+
+# test #2
+nums1, m = [1], 1
+nums2, n = [], 0
+print(result.merge_easy(nums1, m, nums2, n))
+</code></pre>
+<h4 id="5-valid-mountain-array">5. Valid Mountain Array</h4>
+<p>Problem statement:
+Given an array of integers arr, return true if and only if it is a valid mountain array.</p>
+<p>Recall that arr is a mountain array if and only if:</p>
+<ul>
+<li>arr.length &gt;= 3</li>
+<li>There exists some i with 0 &lt; i &lt; arr.length - 1 such that:<ul>
+<li>arr[0] &lt; arr[1] &lt; ... &lt; arr[i - 1] &lt; arr[i]</li>
+<li>arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1]</li>
+</ul>
+</li>
+</ul>
+<p><img alt="App Screenshot" src="../utils/mountainArray.JPG" /></p>
+<p>Test case 1</p>
+<pre><code>Input: arr = [2,1]
+Output: false
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: arr = [3,5,5]
+Output: false
+</code></pre>
+<h5 id="solution-code_4">Solution <a href="code/valid_mountain.py">Code</a></h5>
+<p>We can use two pointers for this problem one starting from left and one from right. We loop over the entire array
+and increase the left index when arr[left+1]&gt;index[left] and decrease the right index by one when arr[right-1]&gt;index[right].
+At the end when left is equal to right and both are not zero, it is a valid mountain array. We do not want 
+either left or right to be zero at the end because it means that the values did not increase.</p>
+<pre><code class="language-python">class Solution:
+    def validMountainArray(self, arr) -&gt; bool:
+        # start a left pointer and a right pointer
+        left, right=0,len(arr)-1
+        # loop over each element in the array
+        for i in range(len(arr)):
+            # if the array is increasing from left, increase the left by one
+            if arr[left+1]&gt;arr[left]:
+                left+=1
+            # if the array is increasing from right, decrease the right by one
+            if arr[right-1]&gt;arr[right]:
+                right-=1
+        # if left and right are the same and are not zero, it is a valid mountain
+        return left==right and not (left==0 or right==0)
+
+# test #1
+arr = [0,3,2,1]
+result=Solution()
+print(result.validMountainArray(arr))
+
+# test #2
+arr=[2,1]
+result=Solution()
+print(result.validMountainArray(arr))
+
+# test #3
+arr=[3,5,5]
+result=Solution()
+print(result.validMountainArray(arr))
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>This file will continuously be updated.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Data Structures in Python" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Data Structures in Python
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../linked-list/" class="md-footer__link md-footer__link--next" aria-label="Next: Linked List" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Linked List
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

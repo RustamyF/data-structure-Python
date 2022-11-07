@@ -1,0 +1,633 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Binary and binary search trees - Algostructure Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#binary-and-binary-search-trees" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Algostructure Docs" class="md-header__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algostructure Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Binary and binary search trees
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algostructure Docs" class="md-nav__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Algostructure Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Data Structures in Python
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linked-list/" class="md-nav__link">
+        Linked List
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Binary and binary search trees
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Binary and binary search trees
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    Insert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contain" class="md-nav__link">
+    contain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-value" class="md-nav__link">
+    minimum value
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack-and-queue/" class="md-nav__link">
+        Stack and queue
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash-table/" class="md-nav__link">
+        Hash table
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    Insert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contain" class="md-nav__link">
+    contain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-value" class="md-nav__link">
+    minimum value
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="binary-and-binary-search-trees">Binary and binary search trees</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Binary trees are another powerful data structure that can be used to store a collection of data. It allows
+for smaller memory allocation without requiring the element shifts for insertion and deletion operations. It has an efficient
+ time complixity to search an item within the tree. </p>
+<p>Suppose we have a basic calss containing a single value its left and right point to None:</p>
+<pre><code class="language-python">class ListNode:
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
+a = ListNode( 4 )
+</code></pre>
+<p>When we call the ListNode class with a data point 4, we get something like the following figure. A single node with two
+arrows pointing to left and right nodes. Since this is the first node of our tree data structure, it is typically called 
+the root of the tree, and from here, we create branches for the tree.</p>
+<p><img alt="App Screenshot" src="../utils/tree_node.JPG" /></p>
+<p>The left and right arrows are pointing at None, meaning that there is no other nodes in our data structure
+because this is a single node and we can create two more nodes and assign them to left and right pointers.</p>
+<pre><code class="language-python">b = ListNode( 3 )
+c = ListNode( 23 )
+a.left = b
+a.right = c
+</code></pre>
+<p>This is how the nodes will look like. The node 3 and 23 are added to the left and right branches. Nodes 3 and 23 both
+have left and right branches pointing toards Non, since there is no other node that is connected to the data structure.</p>
+<p><img alt="App Screenshot" src="../utils/tree.JPG" /></p>
+<p>Lets create some more nodes and attach them to the node 3 and node 23.</p>
+<pre><code class="language-python">d = ListNode ( 12 )
+e = ListNode ( 12 )
+f = ListNode ( 12 )
+g = ListNode ( 12 )
+# We connect node b to d and e. 
+# We also connect node c to f and g as left and right pointers
+b.left = d
+b.right = e
+c.left = f
+c.right = g
+</code></pre>
+<p>The tree data structure will look the following figure. The last nodes in the tree data structure is typically called 
+the leaf node which is represeted using leaf shapes in the figure.</p>
+<p><img alt="App Screenshot" src="../utils/leaf.JPG" />
+And this is how a tree data structure is built. For the rest of this document, we design a binary search tree data 
+structure that supports insert, contain, minimum methods. We will also describe the concepts of tree traversals methods.</p>
+<h2 id="insert">Insert</h2>
+<p>The insert method will add a new data point to the tree structure depending on its value. The property
+of the binary search tree is that left node should be smaller than main node and the main node should
+be smaller than the right node. And this should be true in the entire tree data structure. If there is
+a duplicate value, the method will return False. Otherwise, the method will go left and right untill it finds
+right spot for the new number to be added.</p>
+<pre><code class="language-python">def insert(self, data):
+    # create the new node
+    new_node = ListNode(data)
+    # check if root is empty
+    if self.root is None:
+        # if root is empty, make the root equal to new node
+        self.root = new_node
+        return
+    # create a temp node equal to the root
+    temp = self.root
+    # Loop over the nodes. If data is smaller than the node, go left, otherwise go right.
+    while temp:
+        # If data is equal to the node return False
+        if temp.data == data:
+            return False
+        # If data is smaller than the node, check if it is None.
+        # If None, make it equal to new node, else go left.
+        if data &lt; temp.data:
+            if temp.left is None:
+                temp.left = new_node
+                return
+            temp = temp.left
+        # If data is bigger than the node, check if it is None.
+        # If None, make it equal to new node, else go right.
+        else:
+            if temp.right is None:
+                temp.right = new_node
+                return
+            temp = temp.right
+</code></pre>
+<h2 id="contain">contain</h2>
+<p>The contain method searches the binary search tree data structure and returns True if the element with
+value data exists in our tree structure. If it doesn't exist, it will return False. It uses the property
+of binary search tree and moves left and right in the tree until it reaches the leaf node. If it sees
+the data in the tree, it returns True, otherwise, it returns False.</p>
+<pre><code class="language-python">def contain(self, data):
+    # create a temp node equal to the root
+    temp = self.root
+    # loop over the nodes
+    while temp:
+        # if data is equal to the node, return true
+        if temp.data == data:
+            return True
+        # if data is smaller than the node, go left. Otherwise go right.
+        if data &lt; temp.data:
+            temp = temp.left
+        else:
+            temp = temp.right
+    # return False if no node is equal to the data
+    return False
+</code></pre>
+<h2 id="minimum-value">minimum value</h2>
+<p>Minimum value method takes a node in the binary search tree and return the smallest element within 
+that sub-tree. If we start from the root node, it returns the smallest element within the entire
+tree. It is a simple method which goes to the left nodes until the leaf nodes is reached. Then the 
+leaf node at the farthest left is returned.</p>
+<pre><code class="language-python">@staticmethod
+def min_value_node(cur_node):
+    # minimum node is the node the bottom left of the tree.
+    # So go left until it is None.
+    while cur_node.left is not None:
+        cur_node = cur_node.left
+    return cur_node
+</code></pre>
+<h1 id="tree-traversals">Tree traversals</h1>
+<h4 id="1-breath-first-search-bfs">1. Breath first search (BFS)</h4>
+<pre><code class="language-python">def BFS(self):
+    # initiate a list for result and one for the queue
+    results = []
+    queue = []
+    # check if root is empty
+    if self.root is None:
+        return results
+    # append the root to the queue
+    queue.append(self.root)
+    # loop until there is a node in the queue
+    while queue:
+        # remove the first element
+        new_node = queue.pop(0)
+        # add its value to the results
+        results.append(new_node.data)
+        # if left node is not none, add that to the queue
+        if new_node.left is not None:
+            queue.append(new_node.left)
+        # if the right node is not None, add that to the queue as well
+        if new_node.right is not None:
+            queue.append(new_node.right)
+    # return the results list
+    return results
+</code></pre>
+<h4 id="2-depth-first-search-dfs-pre-order">2. Depth first search (DFS) pre-order</h4>
+<pre><code class="language-python"> ```
+#### 3. Depth first search (DFS) post-order
+
+```python
+
+</code></pre>
+<h4 id="4-depth-first-search-dfs-in-order">4. Depth first search (DFS) in-order</h4>
+<pre><code class="language-python">
+
+</code></pre>
+<h2 id="examples-problems-with-binary-tree">Examples problems with binary tree</h2>
+<h4 id="1-example-1">1. Example 1</h4>
+<h5 id="solution-code">Solution <a href="code/linked_list.py">Code</a></h5>
+<h4 id="2example-2">2.Example 2</h4>
+<h5 id="solution-code_1">Solution <a href="code/linked_list.py">Code</a></h5>
+<pre><code class="language-python">
+</code></pre>
+<h4 id="3-example-3">3. Example 3</h4>
+<h5 id="solution-code_2">Solution <a href="code/ll_cycle.py">Code</a></h5>
+<pre><code class="language-python">
+</code></pre>
+<h4 id="4-example-4">4. Example 4</h4>
+<h5 id="solution-code_3">Solution <a href="code/merge_sorted_array.py">Code</a></h5>
+<pre><code class="language-python">
+</code></pre>
+<h4 id="5-example-5">5. Example 5</h4>
+<h5 id="solution-code_4">Solution <a href="code/valid_mountain.py">Code</a></h5>
+<pre><code class="language-python">
+</code></pre>
+<h2 id="next-steps">Next Steps</h2>
+<p>This file will continuously be updated.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../linked-list/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linked List" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Linked List
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../stack-and-queue/" class="md-footer__link md-footer__link--next" aria-label="Next: Stack and queue" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Stack and queue
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>

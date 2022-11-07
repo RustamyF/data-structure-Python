@@ -1,0 +1,1103 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.8">
+    
+    
+      
+        <title>Linked List - Algostructure Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.815d1a91.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linked-list" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Algostructure Docs" class="md-header__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algostructure Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linked List
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Algostructure Docs" class="md-nav__button md-logo" aria-label="Algostructure Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Algostructure Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Data Structures in Python
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../array/" class="md-nav__link">
+        Arrays
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Linked List
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Linked List
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-printing-the-list" class="md-nav__link">
+    1. Printing the list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-insert" class="md-nav__link">
+    2. - Insert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-search" class="md-nav__link">
+    3. Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get" class="md-nav__link">
+    4. get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-delete" class="md-nav__link">
+    5. Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-update" class="md-nav__link">
+    6. Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-problems-with-linked-list" class="md-nav__link">
+    Examples problems with linked-list
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples problems with linked-list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-design-a-linked-list-data-structure" class="md-nav__link">
+    1. Design a linked-list data structure
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Design a linked-list data structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3reverse-a-linked-list" class="md-nav__link">
+    3.Reverse a linked-list
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Reverse a linked-list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_1" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linked-list-cycle" class="md-nav__link">
+    3. Linked List Cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Linked List Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_2" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.
+  </a>
+  
+    <nav class="md-nav" aria-label="3.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_3" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.
+  </a>
+  
+    <nav class="md-nav" aria-label="4.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_4" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.
+  </a>
+  
+    <nav class="md-nav" aria-label="5.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_5" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binary-tree/" class="md-nav__link">
+        Binary and binary search trees
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack-and-queue/" class="md-nav__link">
+        Stack and queue
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hash-table/" class="md-nav__link">
+        Hash table
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-printing-the-list" class="md-nav__link">
+    1. Printing the list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-insert" class="md-nav__link">
+    2. - Insert
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-search" class="md-nav__link">
+    3. Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get" class="md-nav__link">
+    4. get
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-delete" class="md-nav__link">
+    5. Delete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-update" class="md-nav__link">
+    6. Update
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-problems-with-linked-list" class="md-nav__link">
+    Examples problems with linked-list
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples problems with linked-list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-design-a-linked-list-data-structure" class="md-nav__link">
+    1. Design a linked-list data structure
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Design a linked-list data structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3reverse-a-linked-list" class="md-nav__link">
+    3.Reverse a linked-list
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Reverse a linked-list">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_1" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linked-list-cycle" class="md-nav__link">
+    3. Linked List Cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Linked List Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_2" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.
+  </a>
+  
+    <nav class="md-nav" aria-label="3.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_3" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.
+  </a>
+  
+    <nav class="md-nav" aria-label="4.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_4" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.
+  </a>
+  
+    <nav class="md-nav" aria-label="5.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-code_5" class="md-nav__link">
+    Solution Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="linked-list">Linked List</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Linked list is another powerful data structure that can be used to store a collection in a linear order. It allows
+for smaller memory allocation without requiring the element shifts for insertion and deletion operations. It still requires
+linear time complixity to search an item just like arrays. There are multiple types of linked-lists:
+* Singly linked-list
+* Doubly linked-list
+* circular singly and doubly linked-list</p>
+<p>we will first explain the concept of linked-list using a singly linked-list structure which is the easiest to understand.
+Suppose we have a basic calss containing a single value a next point to None:</p>
+<pre><code class="language-python">class ListNode :
+    def __init__( self, data ) :
+        self.data = data
+        sef.next = None
+</code></pre>
+<p>This is a single node and we can create several instances of this node and each containing an integer value.</p>
+<pre><code class="language-python">a = ListNode( 11 )
+b = ListNode( 52 )
+c = ListNode( 18 )
+</code></pre>
+<p>This is how the nodes will look like. </p>
+<p><img alt="App Screenshot" src="../utils/LL_three_nodes.JPG" /></p>
+<p>Finally, we can point each node to each other where a points to b and b points to c.</p>
+<pre><code class="language-python">a.next = b
+b.next = c
+</code></pre>
+<p><img alt="App Screenshot" src="../utils/linked_three_nodes.JPG" />
+once all nodes are connected, we do not need to have b and c references. All we need is the value at the begining of the list
+which in this case is a. We can find the values in the other nodes as:</p>
+<pre><code class="language-python">print( a.data )
+print( a.next.data )
+print( a.next.next.data )
+</code></pre>
+<p>The first node in the linked-list, must be named
+or referenced by an external variable as it provides an entry point into the linked
+list. This variable is commonly known as the head pointer, or head reference. A
+linked list can also be empty, which is indicated when the head reference is null.
+<img alt="App Screenshot" src="../utils/LL_head.JPG" /></p>
+<p>Since Array is a data structure, we should be comfortable to know how perform these operations in the linkedList:
+- Printing the list
+- Insert
+- Search
+- get
+- Delete 
+- Update</p>
+<h4 id="1-printing-the-list">1. Printing the list</h4>
+<p>The process starts by assigning a temporary external reference <strong>temp</strong>  to
+point to the head of the linked-list. Then we start a while loop and 
+the value stored in the first node is printed by accessing the data component
+stored in the node using the external reference. The external reference is then
+advanced to the next node by assigning it the value of the <strong>temp</strong>  link field.
+ The loop iteration continues until every node in the list has been accessed or <strong>temp</strong> is None.</p>
+<pre><code class="language-python">def print_list(self):
+    # start from the head of linked-list
+    temp=self.head
+    # loop over each element until the temp.next is None
+    while temp is not None:
+        # at each node, print the data
+        print(temp.data)
+        # got to the next node
+        temp=temp.next
+</code></pre>
+<h4 id="2-insert">2. - Insert</h4>
+<p>Inserting an element to an array takes many forms:
+- inserting at an arbitrary location in the linked-list.
+- appending the linked-list.
+- prepending the linked-list.</p>
+<p>We create three methods for each of the insert operations listed above. Inserting an element at an index
+is a O(n) operation at the most. We do not have to shift the elements to the right as we had to for the array
+insert operation. </p>
+<pre><code class="language-python">def insert_by_index(self, index, data):
+    # initiate the new node using the new data
+    new_node = ListNode(data)
+    # check if index is below zero
+    if index&lt;0:
+        return False
+    # check if the new node is a prepend
+    if index==0:
+        new_node.next=self.head
+        self.head=new_node
+        return
+    # get the node before using the get() method
+    temp=self.get(index-1)
+    # check to see if it is a tail node
+    if temp.next==self.tail:
+        self.tail.next=new_node
+        self.tail=new_node
+    else:
+        # call the node where the current index exist as **after**
+        after=temp.next
+        # connect the temp node to new node
+        temp.next=new_node
+        # connect the new_node to after node
+        new_node.next=after
+ ```
+
+Appending and pre-pending a linked-list is simple as far as we track the **head** and **tail** nodes. 
+
+```python
+def insert_tail(self,data):
+    # initiate the new node using the new data
+    new_node = ListNode(data)
+    # if there is not head, create the head node
+    if self.head is None:
+        self.head=new_node
+        self.tail=new_node
+    # if it is not the head node, point the tail to the new node and change tail
+    else:
+        self.tail.next=new_node
+        self.tail=new_node
+def insert_head(self,data):
+    # initiate the new node using the new data
+    new_node = ListNode(data)
+    # if there is not head, create the head node
+    if self.head is None:
+        self.head=new_node
+        self.tail=new_node
+    # if it is not the head node, point the tail to the new node and change tail
+    else:
+        new_node.next=self.head
+        self.head=new_node
+</code></pre>
+<h4 id="3-search">3. Search</h4>
+<p>A linear search operation can be performed on a linked-list just the same way as the arrays.
+ It is very similar to the way we printed the values of linked-list earlier. 
+ The only difference is that the loop can terminate
+early if we find the target value within the list.</p>
+<p><img alt="App Screenshot" src="../utils/search.JPG" /></p>
+<pre><code class="language-python">def search(self, data):
+    # start from the head of linked-list
+    temp=self.head
+    # loop until the end of linked-list
+    while temp is not None:
+        # if the node values is equal to data, return True
+        if temp.data==data:
+            return True
+        # go to the next node
+        temp=temp.next
+    # if the values is not there, return False
+    return False
+</code></pre>
+<h4 id="4-get">4. get</h4>
+<p>get operation will return the node with a certian index. For that we take a loop over the linked-list
+until we reach to the index node. We will have to check certian edge cases like if head nod is None or
+index provided is zero or larger than the length of the linked-list. The following code shows the get method.</p>
+<pre><code class="language-python">def get(self, index):
+    # check if head is None or index is below zero
+    if self.head is None and index&lt;0:
+        return False
+    # start from the head of linked-list
+    temp=self.head
+    # loop over each element until the index
+    for _ in range(index):
+        # check if the index is more than the length of linked_list
+        if temp is None:
+            return False
+        temp=temp.next
+    # return the node value
+    return temp
+
+</code></pre>
+<h4 id="5-delete">5. Delete</h4>
+<p>Deleting a node by its index requires us to find the node just before the node that we want to delete. For that
+ we can use the get() operation we defined before. Once we find that, we can just connect it to the the
+  node after the one that we want to delete. Be mindful of certian edge cases while doing that.
+<img alt="App Screenshot" src="../utils/search.JPG" /></p>
+<pre><code class="language-python">def delete(self, index):
+    # check if head is None or index is below zero
+    if self.head is None and index&lt;0:
+        return False
+    # check if it is the head node
+    if index==0:
+        self.head=self.head.next
+    # get the node before using the get() method
+    temp=self.get(index-1)
+    # check to see if it is a tail node
+    if temp.next==self.tail:
+        temp.next=None
+        self.tail=temp
+    else:
+        temp.next=temp.next.next
+
+</code></pre>
+<h4 id="6-update">6. Update</h4>
+<p>Updating a node in a linked-list requires us to find the element first. We can do that using the get() method
+we defined earlier. Then we just replace its data with the new data.</p>
+<pre><code class="language-python">def update(self, index, data):
+    # get the element using its index and get() method
+    temp=self.get(index)
+    # change its data
+    temp.data=data
+
+</code></pre>
+<h2 id="examples-problems-with-linked-list">Examples problems with linked-list</h2>
+<p>We can use the one pointer and two pointer methods that we used for the array to solve problems related to
+linked-list as well. Just be mindful the linked-list flow.</p>
+<h4 id="1-design-a-linked-list-data-structure">1. Design a linked-list data structure</h4>
+<p>Design a linked-list data structure that contains all essential methods. Please take a look at this <a href="code/linked_list.py">code</a>
+ for the solution. This solution is long, so I will not include it in the readme here.</p>
+<h5 id="solution-code">Solution <a href="code/linked_list.py">Code</a></h5>
+<h4 id="3reverse-a-linked-list">3.Reverse a linked-list</h4>
+<p>Problem Description: Given the head of a singly linked list, reverse the list, and return the reversed list.</p>
+<h5 id="solution-code_1">Solution <a href="code/linked_list.py">Code</a></h5>
+<p>With reversed linked-list we want the direction of next to reverse backward. We will use three pointers to 
+solve the problem in linear fashion: left node, right node and the node itself. We change the direction from
+right to left as the following code. The solution is part of the <a href="code/linked_list.py">linked-list</a> class 
+defined earlier, so the values of head and tail is given to us from that.</p>
+<pre><code class="language-python">def reverse(self):
+    # let the left node be None and initiate temp and right at head
+    left=None
+    temp=self.head
+    right=self.head
+    # loop over the linked-list as long as right is not None
+    while right:
+        # move the right one step
+        right = right.next
+        # point the node to the left
+        temp.next=left
+        # move left to the current node
+        left=temp
+        # move the current node to the right
+        temp=right
+    # finaly, change the head and tail
+    self.head=self.tail
+    self.tail=self.head
+</code></pre>
+<h4 id="3-linked-list-cycle">3. Linked List Cycle</h4>
+<p>Problem Description: Given head, the head of a linked list, determine if the linked list has a cycle in it.
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following 
+the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+Return true if there is a cycle in the linked list. Otherwise, return false.</p>
+<p>Test case 1</p>
+<pre><code>Input: head = [3,2,0,-4], pos = 1
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).  
+</code></pre>
+<p>Test case 2</p>
+<pre><code>Input: head = [1,2], pos = 0
+Output: true
+Explanation: There is a cycle in the linked list, where the tail connects to the 0th node. 
+</code></pre>
+<p>Test case 3</p>
+<pre><code>Input: head = [1], pos = -1
+Output: false
+Explanation: There is no cycle in the linked list. 
+</code></pre>
+<h5 id="solution-code_2">Solution <a href="code/ll_cycle.py">Code</a></h5>
+<p>We can use this question using two methods:
+1. Using hash set. We perform a linear search over each element and add each node to the hash set. If 
+the element was in the set, it means we circled back to the element and therefore, it is a circular linked-list.
+2. The second method is using two pointers. One is fast and jumps two steps at a time. The other one is slow and steps
+one at a time. These two would eventually meet, and if they do, the linked-list is circular.</p>
+<p>In the following, we create two functions using both methods.</p>
+<pre><code class="language-python"># Definition for singly-linked list.
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+class Solution:
+    def hasCycle(self, head) -&gt; bool:
+        q=set()
+        temp=head
+        while temp is not None:
+            if temp in q:
+                return True, temp.val
+            q.add(temp)
+            temp=temp.next
+        return False
+    def hasCycle2(self, head) -&gt; bool:
+        slow=head
+        fast=head
+        while slow and fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+            if slow==fast:
+                return True, slow.val
+        return False
+# test 1#
+# Construct the list
+a, b, c, d=ListNode(3), ListNode(2), ListNode(0), ListNode(-4)
+a.next=b;  b.next=c; c.next=d; d.next=b; head=a
+
+result=Solution()
+print(result.hasCycle(head))
+
+# test 2#
+# Construct the list
+a, b=ListNode(1), ListNode(2)
+a.next=b;  b.next=a; head=a
+result=Solution()
+print(result.hasCycle(head))
+
+# test 3#
+# Construct the list
+a=ListNode(1)
+head=a
+result=Solution()
+print(result.hasCycle(head))
+</code></pre>
+<h4 id="3">3.</h4>
+<h5 id="solution-code_3">Solution <a href="code/duplicate_zeros.py">Code</a></h5>
+<h4 id="4">4.</h4>
+<h5 id="solution-code_4">Solution <a href="code/merge_sorted_array.py">Code</a></h5>
+<h4 id="5">5.</h4>
+<h5 id="solution-code_5">Solution <a href="code/valid_mountain.py">Code</a></h5>
+<h2 id="next-steps">Next Steps</h2>
+<p>This file will continuously be updated.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../array/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arrays" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Arrays
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../binary-tree/" class="md-footer__link md-footer__link--next" aria-label="Next: Binary and binary search trees" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Binary and binary search trees
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
+</html>
