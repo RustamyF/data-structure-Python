@@ -28,10 +28,12 @@ function of python. What if we are not allowed to use built-in functions? The se
 problem using two pointer algorithm. It is a little hard, but if we track our pointers, we can solve it.
 """""
 
+
 class Solution:
     def merge_easy(self, nums1, m, nums2, n) -> None:
-        return sorted(nums1[:m]+nums2)
-    def merge(self,nums1, m, nums2, n):
+        return sorted(nums1[:m] + nums2)
+
+    def merge(self, nums1, m, nums2, n):
         # copy the non zero elements from nums1
         copy = nums1[:m]
         # create two pointers one for nums1 and one for nums2
@@ -48,14 +50,3 @@ class Solution:
                 nums1[p] = nums2[l2]
                 l2 += 1
         return nums1
-result=Solution()
-
-# test #1
-nums1, m = [1,2,3,0,0,0], 3
-nums2, n = [2,5,6], 3
-print(result.merge(nums1, m, nums2, n))
-
-# test #2
-nums1, m = [1], 1
-nums2, n = [], 0
-print(result.merge_easy(nums1, m, nums2, n))
