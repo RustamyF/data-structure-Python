@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Implementation of algorithms and data structures using Python">
+      
+      
+        <meta name="author" content="Fahim Rustamy">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -107,6 +111,18 @@
     
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/RustamyF/data-structure-Python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RustamyF/data-structure-Python
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -139,6 +155,18 @@
     </a>
     Algostructure Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RustamyF/data-structure-Python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RustamyF/data-structure-Python
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -711,6 +739,11 @@
                 
                   
 
+  <a href="https://github.com/RustamyF/data-structure-Python/edit/master/docs/linked-list.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
 
 <h1 id="linked-list">Linked List</h1>
 <h2 id="introduction">Introduction</h2>
@@ -722,29 +755,29 @@ linear time complixity to search an item just like arrays. There are multiple ty
 * circular singly and doubly linked-list</p>
 <p>we will first explain the concept of linked-list using a singly linked-list structure which is the easiest to understand.
 Suppose we have a basic calss containing a single value a next point to None:</p>
-<pre><code class="language-python">class ListNode :
-    def __init__( self, data ) :
-        self.data = data
-        sef.next = None
-</code></pre>
-<p>This is a single node and we can create several instances of this node and each containing an integer value.</p>
-<pre><code class="language-python">a = ListNode( 11 )
-b = ListNode( 52 )
-c = ListNode( 18 )
-</code></pre>
-<p>This is how the nodes will look like. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span> <span class="nc">ListNode</span> <span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">data</span> <span class="p">)</span> <span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="n">sef</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<p>This is a single node and we can create several instances of this node and each containing an integer value.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span> <span class="mi">11</span> <span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span> <span class="mi">52</span> <span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">c</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span> <span class="mi">18</span> <span class="p">)</span>
+</code></pre></div>
+This is how the nodes will look like. </p>
 <p><img alt="App Screenshot" src="../utils/LL_three_nodes.JPG" /></p>
-<p>Finally, we can point each node to each other where a points to b and b points to c.</p>
-<pre><code class="language-python">a.next = b
-b.next = c
-</code></pre>
-<p><img alt="App Screenshot" src="../utils/linked_three_nodes.JPG" />
+<p>Finally, we can point each node to each other where a points to b and b points to c.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">b</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">b</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">c</span>
+</code></pre></div>
+<img alt="App Screenshot" src="../utils/linked_three_nodes.JPG" />
 once all nodes are connected, we do not need to have b and c references. All we need is the value at the begining of the list
 which in this case is a. We can find the values in the other nodes as:</p>
-<pre><code class="language-python">print( a.data )
-print( a.next.data )
-print( a.next.next.data )
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="o">.</span><span class="n">data</span> <span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">data</span> <span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nb">print</span><span class="p">(</span> <span class="n">a</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">data</span> <span class="p">)</span>
+</code></pre></div>
 <p>The first node in the linked-list, must be named
 or referenced by an external variable as it provides an entry point into the linked
 list. This variable is commonly known as the head pointer, or head reference. A
@@ -764,16 +797,16 @@ the value stored in the first node is printed by accessing the data component
 stored in the node using the external reference. The external reference is then
 advanced to the next node by assigning it the value of the <strong>temp</strong>  link field.
  The loop iteration continues until every node in the list has been accessed or <strong>temp</strong> is None.</p>
-<pre><code class="language-python">def print_list(self):
-    # start from the head of linked-list
-    temp=self.head
-    # loop over each element until the temp.next is None
-    while temp is not None:
-        # at each node, print the data
-        print(temp.data)
-        # got to the next node
-        temp=temp.next
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">print_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="c1"># start from the head of linked-list</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="c1"># loop over each element until the temp.next is None</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">while</span> <span class="n">temp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="c1"># at each node, print the data</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        <span class="c1"># got to the next node</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        <span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+</code></pre></div>
 <h4 id="2-insert">2. - Insert</h4>
 <p>Inserting an element to an array takes many forms:
 - inserting at an arbitrary location in the linked-list.
@@ -782,129 +815,126 @@ advanced to the next node by assigning it the value of the <strong>temp</strong>
 <p>We create three methods for each of the insert operations listed above. Inserting an element at an index
 is a O(n) operation at the most. We do not have to shift the elements to the right as we had to for the array
 insert operation. </p>
-<pre><code class="language-python">def insert_by_index(self, index, data):
-    # initiate the new node using the new data
-    new_node = ListNode(data)
-    # check if index is below zero
-    if index&lt;0:
-        return False
-    # check if the new node is a prepend
-    if index==0:
-        new_node.next=self.head
-        self.head=new_node
-        return
-    # get the node before using the get() method
-    temp=self.get(index-1)
-    # check to see if it is a tail node
-    if temp.next==self.tail:
-        self.tail.next=new_node
-        self.tail=new_node
-    else:
-        # call the node where the current index exist as **after**
-        after=temp.next
-        # connect the temp node to new node
-        temp.next=new_node
-        # connect the new_node to after node
-        new_node.next=after
- ```
-
-Appending and pre-pending a linked-list is simple as far as we track the **head** and **tail** nodes. 
-
-```python
-def insert_tail(self,data):
-    # initiate the new node using the new data
-    new_node = ListNode(data)
-    # if there is not head, create the head node
-    if self.head is None:
-        self.head=new_node
-        self.tail=new_node
-    # if it is not the head node, point the tail to the new node and change tail
-    else:
-        self.tail.next=new_node
-        self.tail=new_node
-def insert_head(self,data):
-    # initiate the new node using the new data
-    new_node = ListNode(data)
-    # if there is not head, create the head node
-    if self.head is None:
-        self.head=new_node
-        self.tail=new_node
-    # if it is not the head node, point the tail to the new node and change tail
-    else:
-        new_node.next=self.head
-        self.head=new_node
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">insert_by_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="c1"># initiate the new node using the new data</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">new_node</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="c1"># check if index is below zero</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">if</span> <span class="n">index</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="c1"># check if the new node is a prepend</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="k">return</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="c1"># get the node before using the get() method</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="c1"># check to see if it is a tail node</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">:</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>        <span class="c1"># call the node where the current index exist as **after**</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>        <span class="n">after</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>        <span class="c1"># connect the temp node to new node</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>        <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>        <span class="c1"># connect the new_node to after node</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">after</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a> <span class="err">```</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="n">Appending</span> <span class="ow">and</span> <span class="n">pre</span><span class="o">-</span><span class="n">pending</span> <span class="n">a</span> <span class="n">linked</span><span class="o">-</span><span class="nb">list</span> <span class="ow">is</span> <span class="n">simple</span> <span class="k">as</span> <span class="n">far</span> <span class="k">as</span> <span class="n">we</span> <span class="n">track</span> <span class="n">the</span> <span class="o">**</span><span class="n">head</span><span class="o">**</span> <span class="ow">and</span> <span class="o">**</span><span class="n">tail</span><span class="o">**</span> <span class="n">nodes</span><span class="o">.</span> 
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="err">```</span><span class="n">python</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="k">def</span> <span class="nf">insert_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>    <span class="c1"># initiate the new node using the new data</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>    <span class="n">new_node</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>    <span class="c1"># if there is not head, create the head node</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>    <span class="c1"># if it is not the head node, point the tail to the new node and change tail</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="k">def</span> <span class="nf">insert_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>    <span class="c1"># initiate the new node using the new data</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>    <span class="n">new_node</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>    <span class="c1"># if there is not head, create the head node</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="n">new_node</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>    <span class="c1"># if it is not the head node, point the tail to the new node and change tail</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>        <span class="n">new_node</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="n">new_node</span>
+</code></pre></div>
 <h4 id="3-search">3. Search</h4>
 <p>A linear search operation can be performed on a linked-list just the same way as the arrays.
  It is very similar to the way we printed the values of linked-list earlier. 
  The only difference is that the loop can terminate
 early if we find the target value within the list.</p>
 <p><img alt="App Screenshot" src="../utils/search.JPG" /></p>
-<pre><code class="language-python">def search(self, data):
-    # start from the head of linked-list
-    temp=self.head
-    # loop until the end of linked-list
-    while temp is not None:
-        # if the node values is equal to data, return True
-        if temp.data==data:
-            return True
-        # go to the next node
-        temp=temp.next
-    # if the values is not there, return False
-    return False
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="c1"># start from the head of linked-list</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="c1"># loop until the end of linked-list</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">while</span> <span class="n">temp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="c1"># if the node values is equal to data, return True</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="o">==</span><span class="n">data</span><span class="p">:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>            <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="c1"># go to the next node</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>        <span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="c1"># if the values is not there, return False</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
 <h4 id="4-get">4. get</h4>
 <p>get operation will return the node with a certian index. For that we take a loop over the linked-list
 until we reach to the index node. We will have to check certian edge cases like if head nod is None or
-index provided is zero or larger than the length of the linked-list. The following code shows the get method.</p>
-<pre><code class="language-python">def get(self, index):
-    # check if head is None or index is below zero
-    if self.head is None and index&lt;0:
-        return False
-    # start from the head of linked-list
-    temp=self.head
-    # loop over each element until the index
-    for _ in range(index):
-        # check if the index is more than the length of linked_list
-        if temp is None:
-            return False
-        temp=temp.next
-    # return the node value
-    return temp
-
-</code></pre>
+index provided is zero or larger than the length of the linked-list. The following code shows the get method.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="c1"># check if head is None or index is below zero</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">index</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="c1"># start from the head of linked-list</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="c1"># loop over each element until the index</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="c1"># check if the index is more than the length of linked_list</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>        <span class="k">if</span> <span class="n">temp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>            <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>        <span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="c1"># return the node value</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">return</span> <span class="n">temp</span>
+</code></pre></div></p>
 <h4 id="5-delete">5. Delete</h4>
 <p>Deleting a node by its index requires us to find the node just before the node that we want to delete. For that
  we can use the get() operation we defined before. Once we find that, we can just connect it to the the
   node after the one that we want to delete. Be mindful of certian edge cases while doing that.
-<img alt="App Screenshot" src="../utils/search.JPG" /></p>
-<pre><code class="language-python">def delete(self, index):
-    # check if head is None or index is below zero
-    if self.head is None and index&lt;0:
-        return False
-    # check if it is the head node
-    if index==0:
-        self.head=self.head.next
-    # get the node before using the get() method
-    temp=self.get(index-1)
-    # check to see if it is a tail node
-    if temp.next==self.tail:
-        temp.next=None
-        self.tail=temp
-    else:
-        temp.next=temp.next.next
-
-</code></pre>
+<img alt="App Screenshot" src="../utils/search.JPG" />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="c1"># check if head is None or index is below zero</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">index</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="c1"># check if it is the head node</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="k">if</span> <span class="n">index</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="c1"># get the node before using the get() method</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    <span class="c1"># check to see if it is a tail node</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    <span class="k">if</span> <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">==</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">:</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>        <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="kc">None</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="n">temp</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>        <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span>
+</code></pre></div></p>
 <h4 id="6-update">6. Update</h4>
 <p>Updating a node in a linked-list requires us to find the element first. We can do that using the get() method
-we defined earlier. Then we just replace its data with the new data.</p>
-<pre><code class="language-python">def update(self, index, data):
-    # get the element using its index and get() method
-    temp=self.get(index)
-    # change its data
-    temp.data=data
-
-</code></pre>
+we defined earlier. Then we just replace its data with the new data.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="c1"># get the element using its index and get() method</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="c1"># change its data</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="n">temp</span><span class="o">.</span><span class="n">data</span><span class="o">=</span><span class="n">data</span>
+</code></pre></div></p>
 <h2 id="examples-problems-with-linked-list">Examples problems with linked-list</h2>
 <p>We can use the one pointer and two pointer methods that we used for the array to solve problems related to
 linked-list as well. Just be mindful the linked-list flow.</p>
@@ -918,46 +948,46 @@ linked-list as well. Just be mindful the linked-list flow.</p>
 <p>With reversed linked-list we want the direction of next to reverse backward. We will use three pointers to 
 solve the problem in linear fashion: left node, right node and the node itself. We change the direction from
 right to left as the following code. The solution is part of the <a href="code/linked_list.py">linked-list</a> class 
-defined earlier, so the values of head and tail is given to us from that.</p>
-<pre><code class="language-python">def reverse(self):
-    # let the left node be None and initiate temp and right at head
-    left=None
-    temp=self.head
-    right=self.head
-    # loop over the linked-list as long as right is not None
-    while right:
-        # move the right one step
-        right = right.next
-        # point the node to the left
-        temp.next=left
-        # move left to the current node
-        left=temp
-        # move the current node to the right
-        temp=right
-    # finaly, change the head and tail
-    self.head=self.tail
-    self.tail=self.head
-</code></pre>
+defined earlier, so the values of head and tail is given to us from that.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="c1"># let the left node be None and initiate temp and right at head</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">left</span><span class="o">=</span><span class="kc">None</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">temp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">right</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="c1"># loop over the linked-list as long as right is not None</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="k">while</span> <span class="n">right</span><span class="p">:</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        <span class="c1"># move the right one step</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        <span class="n">right</span> <span class="o">=</span> <span class="n">right</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        <span class="c1"># point the node to the left</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        <span class="n">temp</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">left</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>        <span class="c1"># move left to the current node</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>        <span class="n">left</span><span class="o">=</span><span class="n">temp</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>        <span class="c1"># move the current node to the right</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>        <span class="n">temp</span><span class="o">=</span><span class="n">right</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    <span class="c1"># finaly, change the head and tail</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tail</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">head</span>
+</code></pre></div></p>
 <h4 id="3-linked-list-cycle">3. Linked List Cycle</h4>
 <p>Problem Description: Given head, the head of a linked list, determine if the linked list has a cycle in it.
 There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following 
 the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
 Return true if there is a cycle in the linked list. Otherwise, return false.</p>
-<p>Test case 1</p>
-<pre><code>Input: head = [3,2,0,-4], pos = 1
-Output: true
-Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).  
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: head = [1,2], pos = 0
-Output: true
-Explanation: There is a cycle in the linked list, where the tail connects to the 0th node. 
-</code></pre>
-<p>Test case 3</p>
-<pre><code>Input: head = [1], pos = -1
-Output: false
-Explanation: There is no cycle in the linked list. 
-</code></pre>
+<p>Test case 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Input: head = [3,2,0,-4], pos = 1
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Output: true
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).  
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Input: head = [1,2], pos = 0
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Output: true
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Explanation: There is a cycle in the linked list, where the tail connects to the 0th node. 
+</code></pre></div>
+Test case 3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Input: head = [1], pos = -1
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Output: false
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Explanation: There is no cycle in the linked list. 
+</code></pre></div></p>
 <h5 id="solution-code_2">Solution <a href="code/ll_cycle.py">Code</a></h5>
 <p>We can use this question using two methods:
 1. Using hash set. We perform a linear search over each element and add each node to the hash set. If 
@@ -965,53 +995,53 @@ the element was in the set, it means we circled back to the element and therefor
 2. The second method is using two pointers. One is fast and jumps two steps at a time. The other one is slow and steps
 one at a time. These two would eventually meet, and if they do, the linked-list is circular.</p>
 <p>In the following, we create two functions using both methods.</p>
-<pre><code class="language-python"># Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-class Solution:
-    def hasCycle(self, head) -&gt; bool:
-        q=set()
-        temp=head
-        while temp is not None:
-            if temp in q:
-                return True, temp.val
-            q.add(temp)
-            temp=temp.next
-        return False
-    def hasCycle2(self, head) -&gt; bool:
-        slow=head
-        fast=head
-        while slow and fast and fast.next:
-            slow=slow.next
-            fast=fast.next.next
-            if slow==fast:
-                return True, slow.val
-        return False
-# test 1#
-# Construct the list
-a, b, c, d=ListNode(3), ListNode(2), ListNode(0), ListNode(-4)
-a.next=b;  b.next=c; c.next=d; d.next=b; head=a
-
-result=Solution()
-print(result.hasCycle(head))
-
-# test 2#
-# Construct the list
-a, b=ListNode(1), ListNode(2)
-a.next=b;  b.next=a; head=a
-result=Solution()
-print(result.hasCycle(head))
-
-# test 3#
-# Construct the list
-a=ListNode(1)
-head=a
-result=Solution()
-print(result.hasCycle(head))
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Definition for singly-linked list.</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">x</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="k">def</span> <span class="nf">hasCycle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        <span class="n">q</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>        <span class="n">temp</span><span class="o">=</span><span class="n">head</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        <span class="k">while</span> <span class="n">temp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>            <span class="k">if</span> <span class="n">temp</span> <span class="ow">in</span> <span class="n">q</span><span class="p">:</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>                <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">temp</span><span class="o">.</span><span class="n">val</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>            <span class="n">q</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>            <span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    <span class="k">def</span> <span class="nf">hasCycle2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>        <span class="n">slow</span><span class="o">=</span><span class="n">head</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>        <span class="n">fast</span><span class="o">=</span><span class="n">head</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        <span class="k">while</span> <span class="n">slow</span> <span class="ow">and</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="o">.</span><span class="n">next</span><span class="p">:</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>            <span class="n">slow</span><span class="o">=</span><span class="n">slow</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>            <span class="n">fast</span><span class="o">=</span><span class="n">fast</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>            <span class="k">if</span> <span class="n">slow</span><span class="o">==</span><span class="n">fast</span><span class="p">:</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>                <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">slow</span><span class="o">.</span><span class="n">val</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="c1"># test 1#</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="c1"># Construct the list</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">ListNode</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="n">a</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">b</span><span class="p">;</span>  <span class="n">b</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">c</span><span class="p">;</span> <span class="n">c</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">d</span><span class="p">;</span> <span class="n">d</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">b</span><span class="p">;</span> <span class="n">head</span><span class="o">=</span><span class="n">a</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hasCycle</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="c1"># test 2#</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="c1"># Construct the list</span>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="n">a</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">b</span><span class="p">;</span>  <span class="n">b</span><span class="o">.</span><span class="n">next</span><span class="o">=</span><span class="n">a</span><span class="p">;</span> <span class="n">head</span><span class="o">=</span><span class="n">a</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hasCycle</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="c1"># test 3#</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="c1"># Construct the list</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a><span class="n">a</span><span class="o">=</span><span class="n">ListNode</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="n">head</span><span class="o">=</span><span class="n">a</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">hasCycle</span><span class="p">(</span><span class="n">head</span><span class="p">))</span>
+</code></pre></div>
 <h4 id="3">3.</h4>
 <h5 id="solution-code_3">Solution <a href="code/duplicate_zeros.py">Code</a></h5>
 <h4 id="4">4.</h4>
@@ -1084,6 +1114,19 @@ print(result.hasCycle(head))
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/frustamy" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1093,7 +1136,7 @@ print(result.hasCycle(head))
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>

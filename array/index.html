@@ -6,6 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Implementation of algorithms and data structures using Python">
+      
+      
+        <meta name="author" content="Fahim Rustamy">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -107,6 +111,18 @@
     
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/RustamyF/data-structure-Python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RustamyF/data-structure-Python
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -139,6 +155,18 @@
     </a>
     Algostructure Docs
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RustamyF/data-structure-Python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RustamyF/data-structure-Python
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -643,6 +671,11 @@
                 
                   
 
+  <a href="https://github.com/RustamyF/data-structure-Python/edit/master/docs/array.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
 
 <h1 id="arrays">Arrays</h1>
 <h2 id="introduction">Introduction</h2>
@@ -676,12 +709,12 @@
 <p>to access and element in the array is quite simple. We just point to the index i of the array and the element will be returned to us.
 For example, we have an array with [1, 'dog', 'cat', 5] and we want to to access
 the element in index 0 and index 2, we use:</p>
-<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5]
-&gt;&gt;&gt; array[0]
-1
-&gt;&gt;&gt; array[2]
-'cat'
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mi">1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s1">&#39;cat&#39;</span>
+</code></pre></div>
 <div id="add-element"/>
 
 <h4 id="2-adding-an-element-to-array">2. Adding an element to Array</h4>
@@ -690,36 +723,36 @@ the element in index 0 and index 2, we use:</p>
 1. Inserting a new element at the beginning of the Array.
 1. Inserting a new element at any given index inside the Array</p>
 <p>Adding an element at the end of an array is easy. We can use the <strong>append()</strong> method to add new elements at the end of  Array.
-We can also just add the new element to the array as a list.</p>
-<pre><code class="language-python">&gt;&gt;&gt; array.append(6)
-&gt;&gt;&gt; array
-[1, 'dog', 'cat', 5, 6]
-
-&gt;&gt;&gt; array=array+['sky']
-&gt;&gt;&gt; array
-[1, 'dog', 'cat', 5, 6, 'sky']
-</code></pre>
-<p>Adding an element at the start or anywhere in the array is more complicated because all other indexes needs to change as well.
+We can also just add the new element to the array as a list.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">=</span><span class="n">array</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+</code></pre></div>
+Adding an element at the start or anywhere in the array is more complicated because all other indexes needs to change as well.
 This is one of the flaws of Array data structure that adding and deleting and element is not efficient. The following code sniped shows
-the method of adding a new element at a specified index to an array.</p>
-<pre><code class="language-python">array=[1, 'dog', 'cat', 5, 6, 'sky']
-def insert(index, value):
-    # First, we will have to create space for a new element.
-    array.append(0)
-    # then shift all the elements to the right from the index location
-    for i in range(index,len(array)-1,-1):
-        array[i+1]=array[i]
-    # Finally assign the value of index
-    array[index]=value
-insert(0,'hi')
-print(array)
-</code></pre>
-<p>Python has a built-in function that does this for us using <strong>array.insert(index,value)</strong> method.</p>
-<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5, 6, 'sky']
-&gt;&gt;&gt; array.insert(0,'hi')
-&gt;&gt;&gt; array
-['hi', 1, 'dog', 'cat', 5, 6, 'sky']
-</code></pre>
+the method of adding a new element at a specified index to an array.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">def</span> <span class="nf">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="c1"># First, we will have to create space for a new element.</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="c1"># then shift all the elements to the right from the index location</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">index</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="c1"># Finally assign the value of index</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">=</span><span class="n">value</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</code></pre></div>
+Python has a built-in function that does this for us using <strong>array.insert(index,value)</strong> method.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">[</span><span class="s1">&#39;hi&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+</code></pre></div></p>
 <div id="delete-element"/>
 
 <h4 id="3-deleting-an-element-from-array">3. Deleting an element from Array</h4>
@@ -729,21 +762,21 @@ from an array:
 - <strong>array.pop(index)</strong>: This method removes the element with a specific index from an array and returns the removed element.
 - <strong>array.remove(value)</strong>: This method removes the first matching element (which is passed as an argument) from the list. If there are multiple element of the
 same value in an array, this method removes only the first one.
-- <strong>del array[index]</strong>: This method deletes an element from an array without return anything.</p>
-<pre><code class="language-python">&gt;&gt;&gt; array=[1, 'dog', 'cat', 5, 6, 'sky']
-&gt;&gt;&gt; array.pop(2)
-'cat'
-&gt;&gt;&gt; array
-[1, 'dog', 5, 6, 'sky']
-
-&gt;&gt;&gt; array.remove('sky')
-&gt;&gt;&gt; array
-[1, 'dog', 5, 6]
-
-&gt;&gt;&gt; del array[0]
-&gt;&gt;&gt; array
-['dog', 5, 6]
-</code></pre>
+- <strong>del array[index]</strong>: This method deletes an element from an array without return anything.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="s1">&#39;cat&#39;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;sky&#39;</span><span class="p">]</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;sky&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="o">&gt;&gt;&gt;</span> <span class="k">del</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">array</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">[</span><span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre></div></p>
 <div id="search-element"/>
 
 <h4 id="4-searching-an-element-in-array">4. Searching an element in Array</h4>
@@ -751,38 +784,38 @@ same value in an array, this method removes only the first one.
 Searching means to find an occurrence of a particular element in the Array and return its position. We might need to search an Array to find out whether or not 
 an element is present in the Array. We might also want to search an Array that is arranged in a specific fashion to determine which index to insert a new element at.
 * Linear search: In this method we look every element of an array one by one until we find that element and return its index. The following code snippet will perform linear search 
-and return the index of the element that is equal to the value we are searching and prints "this element does not exist" when there is not such element in the array.</p>
-<pre><code class="language-python">def search(value):
-    for index, val in enumerate(array):
-        if val==value:
-            return index
-    return &quot;this element does not exist&quot;
-</code></pre>
+and return the index of the element that is equal to the value we are searching and prints "this element does not exist" when there is not such element in the array.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        <span class="k">if</span> <span class="n">val</span><span class="o">==</span><span class="n">value</span><span class="p">:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>            <span class="k">return</span> <span class="n">index</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="k">return</span> <span class="s2">&quot;this element does not exist&quot;</span>
+</code></pre></div></p>
 <ul>
 <li>Binary Search</li>
 </ul>
 <p>This method reduces time complexity of search to log(n) when the elements in the array are sorted. This algorithm will not work if the array is not sorted.
 Binary search divides the array into half and checks if the middle element is bigger than the target value or smaller. If it was bigger, it will take the ride side of the mid point and repeats this process untill
-the values is found.</p>
-<pre><code class="language-python">array=[1,3,5,7,9,10]
-def binary_search(value):
-    # initiate left and right pointers
-    left, right=0, len(array)-1
-    while left&lt;=right:
-        # find the mid-point index
-        mid=(left+right)//2
-        # check if the mid-point index is equal to the target value
-        if value==array[mid]:
-            return mid
-        # If target value is bigger than the mid-point element, change the left index to mid+1
-        elif value&gt;array[mid]:
-            left=mid+1
-        # Otherwise, bring the right pointer to the mid-1
-        else:
-            right=mid-1
-    # if the element does not exist, print the following
-    return &quot;this element does not exist&quot;
-</code></pre>
+the values is found.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="c1"># initiate left and right pointers</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="k">while</span> <span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="p">:</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="c1"># find the mid-point index</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">mid</span><span class="o">=</span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="c1"># check if the mid-point index is equal to the target value</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="k">if</span> <span class="n">value</span><span class="o">==</span><span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>            <span class="k">return</span> <span class="n">mid</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        <span class="c1"># If target value is bigger than the mid-point element, change the left index to mid+1</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>        <span class="k">elif</span> <span class="n">value</span><span class="o">&gt;</span><span class="n">array</span><span class="p">[</span><span class="n">mid</span><span class="p">]:</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>            <span class="n">left</span><span class="o">=</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>        <span class="c1"># Otherwise, bring the right pointer to the mid-1</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>        <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>            <span class="n">right</span><span class="o">=</span><span class="n">mid</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="c1"># if the element does not exist, print the following</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="s2">&quot;this element does not exist&quot;</span>
+</code></pre></div></p>
 <h2 id="examples-problems-with-arrays">Examples problems with Arrays</h2>
 <p>When solving array problems, there are two most popular methods that can be used to tackle the problem:
 1. The first one is the one pointer or linear search. This is a basic approach and can solve a lots of array problem.
@@ -791,125 +824,125 @@ of using one pointer, you can keep track of two pointers. These pointers can go 
 The following example problems will explain the concept of one pointer and two pointer search methods.</p>
 <h4 id="1-max-consecutive-ones">1. Max Consecutive Ones</h4>
 <p>Given a binary array nums, return the maximum number of consecutive 1's in the array.
-Test case 1</p>
-<pre><code>Input: nums = [1,1,0,1,1,1]
-Output: 3
-Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: nums = [1,0,1,1,0,1]
-Output: 2
-</code></pre>
+Test case 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Input: nums = [1,1,0,1,1,1]
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Output: 3
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Input: nums = [1,0,1,1,0,1]
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Output: 2
+</code></pre></div></p>
 <h5 id="solution-code">Solution <a href="code/max_consec_ones.py">Code</a></h5>
 <p>We can solve this problem by passing through every element in the array and keeping track of the
-maximum number of consecutive ones. The following snipped shows the python solution.</p>
-<pre><code class="language-python">class Solution:
-    def findMaxConsecutiveOnes(self, nums) -&gt; int:
-        # initiate a current max and maximum of the maximum values
-        curmax, maximum=0, 0
-        for i in range(len(nums)):
-            # when the element is 1, increase the current max by one
-            if nums[i]==1:
-                curmax+=1
-            # When the element is not 1, make the current max 0
-            else:
-                curmax=0
-            # keep track of the maximum of them
-            maximum=max(maximum,curmax)
-        return maximum
-
-result=Solution()
-array=[1,1,0,1,1,1]
-print(result.findMaxConsecutiveOnes(array))
-</code></pre>
+maximum number of consecutive ones. The following snipped shows the python solution.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="k">def</span> <span class="nf">findMaxConsecutiveOnes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="c1"># initiate a current max and maximum of the maximum values</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="n">curmax</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>            <span class="c1"># when the element is 1, increase the current max by one</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>                <span class="n">curmax</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>            <span class="c1"># When the element is not 1, make the current max 0</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>                <span class="n">curmax</span><span class="o">=</span><span class="mi">0</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>            <span class="c1"># keep track of the maximum of them</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>            <span class="n">maximum</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">maximum</span><span class="p">,</span><span class="n">curmax</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        <span class="k">return</span> <span class="n">maximum</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">findMaxConsecutiveOnes</span><span class="p">(</span><span class="n">array</span><span class="p">))</span>
+</code></pre></div></p>
 <h4 id="2-find-numbers-with-even-number-of-digits">2. Find Numbers with Even Number of Digits</h4>
 <p>Given an array nums of integers, return how many of them contain an even number of digits..
-Test case 1</p>
-<pre><code>Input: nums = [12,345,2,6,7896]
-Output: 2
-Explanation: 
-12 contains 2 digits (even number of digits). 
-345 contains 3 digits (odd number of digits). 
-2 contains 1 digit (odd number of digits). 
-6 contains 1 digit (odd number of digits). 
-7896 contains 4 digits (even number of digits). 
-Therefore only 12 and 7896 contain an even number of digits.
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: nums = [555,901,482,1771]
-Output: 1 
-Explanation: 
-Only 1771 contains an even number of digits.
-</code></pre>
+Test case 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Input: nums = [12,345,2,6,7896]
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Output: 2
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Explanation: 
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>12 contains 2 digits (even number of digits). 
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>345 contains 3 digits (odd number of digits). 
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>2 contains 1 digit (odd number of digits). 
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>6 contains 1 digit (odd number of digits). 
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>7896 contains 4 digits (even number of digits). 
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Therefore only 12 and 7896 contain an even number of digits.
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Input: nums = [555,901,482,1771]
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Output: 1 
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Explanation: 
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Only 1771 contains an even number of digits.
+</code></pre></div></p>
 <h5 id="solution-code_1">Solution <a href="code/find_number_of_evens.py">Code</a></h5>
 <p>The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
 and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
-of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.</p>
-<pre><code class="language-python">class Solution:
-    def findNumbers(self, nums):
-        # Start the counter from zero
-        count=0
-        # loop over each element in the bytearray
-        for num in nums:
-            # convert the number to a string and divid its length to 2.
-            if len(str(num))%2==0:
-                # if the remainder is equal to zero, increase the counter by one.
-                count+=1
-        return count
-result=Solution()
-
-# test 1
-array=[12,345,2,6,7896]
-print(result.findNumbers(array))
-
-# test 2
-array=[555,901,482,1771]
-print(result.findNumbers(array))
-</code></pre>
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="k">def</span> <span class="nf">findNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">):</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="c1"># Start the counter from zero</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="n">count</span><span class="o">=</span><span class="mi">0</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        <span class="c1"># loop over each element in the bytearray</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>            <span class="c1"># convert the number to a string and divid its length to 2.</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">))</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>                <span class="c1"># if the remainder is equal to zero, increase the counter by one.</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>                <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="k">return</span> <span class="n">count</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="c1"># test 1</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">345</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7896</span><span class="p">]</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">findNumbers</span><span class="p">(</span><span class="n">array</span><span class="p">))</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="c1"># test 2</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">555</span><span class="p">,</span><span class="mi">901</span><span class="p">,</span><span class="mi">482</span><span class="p">,</span><span class="mi">1771</span><span class="p">]</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">findNumbers</span><span class="p">(</span><span class="n">array</span><span class="p">))</span>
+</code></pre></div></p>
 <h4 id="3-duplicate-zeros">3. Duplicate Zeros</h4>
 <p>Given a fixed-length integer array arr, duplicate each occurrence of zero, shifting the remaining elements to the right.</p>
-<p>Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.</p>
-<pre><code>Input: arr = [1,0,2,3,0,4,5,0]
-Output: [1,0,0,2,3,0,0,4]
-Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: arr = [1,2,3]
-Output: [1,2,3]
-Explanation: After calling your function, the input array is modified to: [1,2,3]
-</code></pre>
+<p>Note that elements beyond the length of the original array are not written. Do the above modifications to the input array in place and do not return anything.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Input: arr = [1,0,2,3,0,4,5,0]
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Output: [1,0,0,2,3,0,0,4]
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Input: arr = [1,2,3]
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Output: [1,2,3]
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Explanation: After calling your function, the input array is modified to: [1,2,3]
+</code></pre></div></p>
 <h5 id="solution-code_2">Solution <a href="code/duplicate_zeros.py">Code</a></h5>
 <p>The problem is asking us to find the number of digits that have even number of digits. For example 23 has two digits
 and 345 has three digits. We can solve this problem by converting each number in the array to a string and find the length
-of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.</p>
-<pre><code class="language-python">class Solution:
-    def duplicateZeros(self, nums):
-        i = 0
-        # loop over every element in the array
-        while i&lt;len(nums)-1:
-            # if the element is zero, shift all the element to the right by one.
-            if nums[i]==0:
-                # shift all the element to the right by one
-                for j in reversed(range(i,len(nums)-1)):
-                    nums[j+1]=nums[j]
-                # now that everything to the right is shifted, add a zero
-                nums[i+1]=0
-                # increase the step by one
-                i+=1
-            i+=1
-        return nums
-
-
-result=Solution()
-
-# test 1
-array=[1,0,2,3,0,4,5,0]
-print(result.duplicateZeros(array))
-
-# test 2
-array=[1,2,3]
-print(result.duplicateZeros(array))
-</code></pre>
+of that string and divide it by two. If there is nor reminder, we count that as an even number of digits.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="k">def</span> <span class="nf">duplicateZeros</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">):</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="c1"># loop over every element in the array</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>            <span class="c1"># if the element is zero, shift all the element to the right by one.</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>                <span class="c1"># shift all the element to the right by one</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>                <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>                    <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>                <span class="c1"># now that everything to the right is shifted, add a zero</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>                <span class="c1"># increase the step by one</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        <span class="k">return</span> <span class="n">nums</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="c1"># test 1</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">duplicateZeros</span><span class="p">(</span><span class="n">array</span><span class="p">))</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="c1"># test 2</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="n">array</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">duplicateZeros</span><span class="p">(</span><span class="n">array</span><span class="p">))</span>
+</code></pre></div></p>
 <h4 id="4-merge-sorted-array">4. Merge Sorted Array</h4>
 <p>Problem statement:
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, 
@@ -918,55 +951,55 @@ representing the number of elements in nums1 and nums2 respectively.</p>
 <p>The final sorted array should not be returned by the function, but instead be stored inside the array 
 nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that 
 should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.</p>
-<p>Test case 1</p>
-<pre><code>Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-Output: [1,2,2,3,5,6]
-Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
-The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: nums1 = [1], m = 1, nums2 = [], n = 0
-Output: [1]
-Explanation: The arrays we are merging are [1] and [].
-The result of the merge is [1].
-</code></pre>
+<p>Test case 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Output: [1,2,2,3,5,6]
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Input: nums1 = [1], m = 1, nums2 = [], n = 0
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Output: [1]
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Explanation: The arrays we are merging are [1] and [].
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>The result of the merge is [1].
+</code></pre></div></p>
 <h5 id="solution-code_3">Solution <a href="code/merge_sorted_array.py">Code</a></h5>
 <p>The problem can be solved an easy way using sorted function in python. We take the slice of nums1 from 0 to m and 
 combine it with nums2 and return the sorted result. I can be done in one line of code. Here we are using a built in
 function of python. What if we are not allowed to use built-in functions? The second method is created to solve the 
 problem using two pointer algorithm. It is a little hard, but if we track our pointers, we can solve it.</p>
-<pre><code class="language-python">class Solution:
-    def merge_easy(self, nums1, m, nums2, n) -&gt; None:
-        return sorted(nums1[:m]+nums2)
-    def merge(self,nums1, m, nums2, n):
-        # copy the non zero elements from nums1
-        copy = nums1[:m]
-        # create two pointers one for nums1 and one for nums2
-        l1 = 0
-        l2 = 0
-        # Compare elements from nums1Copy and nums2 and write the smallest to nums1.
-        for p in range(n + m):
-            # We also need to ensure that l1 and l2 aren't over the boundaries
-            # of their respective arrays.
-            if l2 &gt;= n or (l1 &lt; m and copy[l1] &lt;= nums2[l2]):
-                nums1[p] = copy[l1]
-                l1 += 1
-            else:
-                nums1[p] = nums2[l2]
-                l2 += 1
-        return nums1
-result=Solution()
-
-# test #1
-nums1, m = [1,2,3,0,0,0], 3
-nums2, n = [2,5,6], 3
-print(result.merge(nums1, m, nums2, n))
-
-# test #2
-nums1, m = [1], 1
-nums2, n = [], 0
-print(result.merge_easy(nums1, m, nums2, n))
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="k">def</span> <span class="nf">merge_easy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums1</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">nums2</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>        <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nums1</span><span class="p">[:</span><span class="n">m</span><span class="p">]</span><span class="o">+</span><span class="n">nums2</span><span class="p">)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">nums1</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">nums2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>        <span class="c1"># copy the non zero elements from nums1</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>        <span class="n">copy</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[:</span><span class="n">m</span><span class="p">]</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>        <span class="c1"># create two pointers one for nums1 and one for nums2</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>        <span class="n">l1</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>        <span class="n">l2</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>        <span class="c1"># Compare elements from nums1Copy and nums2 and write the smallest to nums1.</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="n">m</span><span class="p">):</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>            <span class="c1"># We also need to ensure that l1 and l2 aren&#39;t over the boundaries</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>            <span class="c1"># of their respective arrays.</span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>            <span class="k">if</span> <span class="n">l2</span> <span class="o">&gt;=</span> <span class="n">n</span> <span class="ow">or</span> <span class="p">(</span><span class="n">l1</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="n">copy</span><span class="p">[</span><span class="n">l1</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">l2</span><span class="p">]):</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>                <span class="n">nums1</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">copy</span><span class="p">[</span><span class="n">l1</span><span class="p">]</span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>                <span class="n">l1</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>                <span class="n">nums1</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">l2</span><span class="p">]</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>                <span class="n">l2</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>        <span class="k">return</span> <span class="n">nums1</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="c1"># test #1</span>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="n">nums1</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">3</span>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="n">nums2</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="mi">3</span>
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">nums2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="c1"># test #2</span>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="n">nums1</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="n">nums2</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="p">[],</span> <span class="mi">0</span>
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">merge_easy</span><span class="p">(</span><span class="n">nums1</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">nums2</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
+</code></pre></div>
 <h4 id="5-valid-mountain-array">5. Valid Mountain Array</h4>
 <p>Problem statement:
 Given an array of integers arr, return true if and only if it is a valid mountain array.</p>
@@ -980,49 +1013,49 @@ Given an array of integers arr, return true if and only if it is a valid mountai
 </li>
 </ul>
 <p><img alt="App Screenshot" src="../utils/mountainArray.JPG" /></p>
-<p>Test case 1</p>
-<pre><code>Input: arr = [2,1]
-Output: false
-</code></pre>
-<p>Test case 2</p>
-<pre><code>Input: arr = [3,5,5]
-Output: false
-</code></pre>
+<p>Test case 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Input: arr = [2,1]
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Output: false
+</code></pre></div>
+Test case 2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Input: arr = [3,5,5]
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Output: false
+</code></pre></div></p>
 <h5 id="solution-code_4">Solution <a href="code/valid_mountain.py">Code</a></h5>
 <p>We can use two pointers for this problem one starting from left and one from right. We loop over the entire array
 and increase the left index when arr[left+1]&gt;index[left] and decrease the right index by one when arr[right-1]&gt;index[right].
 At the end when left is equal to right and both are not zero, it is a valid mountain array. We do not want 
 either left or right to be zero at the end because it means that the values did not increase.</p>
-<pre><code class="language-python">class Solution:
-    def validMountainArray(self, arr) -&gt; bool:
-        # start a left pointer and a right pointer
-        left, right=0,len(arr)-1
-        # loop over each element in the array
-        for i in range(len(arr)):
-            # if the array is increasing from left, increase the left by one
-            if arr[left+1]&gt;arr[left]:
-                left+=1
-            # if the array is increasing from right, decrease the right by one
-            if arr[right-1]&gt;arr[right]:
-                right-=1
-        # if left and right are the same and are not zero, it is a valid mountain
-        return left==right and not (left==0 or right==0)
-
-# test #1
-arr = [0,3,2,1]
-result=Solution()
-print(result.validMountainArray(arr))
-
-# test #2
-arr=[2,1]
-result=Solution()
-print(result.validMountainArray(arr))
-
-# test #3
-arr=[3,5,5]
-result=Solution()
-print(result.validMountainArray(arr))
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="k">def</span> <span class="nf">validMountainArray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>        <span class="c1"># start a left pointer and a right pointer</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>        <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>        <span class="c1"># loop over each element in the array</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)):</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>            <span class="c1"># if the array is increasing from left, increase the left by one</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">arr</span><span class="p">[</span><span class="n">left</span><span class="p">]:</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>                <span class="n">left</span><span class="o">+=</span><span class="mi">1</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>            <span class="c1"># if the array is increasing from right, decrease the right by one</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>            <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">arr</span><span class="p">[</span><span class="n">right</span><span class="p">]:</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>                <span class="n">right</span><span class="o">-=</span><span class="mi">1</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>        <span class="c1"># if left and right are the same and are not zero, it is a valid mountain</span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>        <span class="k">return</span> <span class="n">left</span><span class="o">==</span><span class="n">right</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">left</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">right</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="c1"># test #1</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">validMountainArray</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="c1"># test #2</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">validMountainArray</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a><span class="c1"># test #3</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a><span class="n">result</span><span class="o">=</span><span class="n">Solution</span><span class="p">()</span>
+<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">validMountainArray</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+</code></pre></div>
 <h2 id="next-steps">Next Steps</h2>
 <p>This file will continuously be updated.</p>
 
@@ -1089,6 +1122,19 @@ print(result.validMountainArray(arr))
   
 </div>
       
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/frustamy" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -1098,7 +1144,7 @@ print(result.validMountainArray(arr))
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
