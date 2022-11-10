@@ -1,8 +1,16 @@
 # mkdocs.yml
 site_name: Algostructure Docs
-
+site_author: Fahim Rustamy
+site_description: >-
+  Implementation of algorithms and data structures using Python
+# Repository
+repo_name: RustamyF/data-structure-Python
+repo_url: https://github.com/RustamyF/data-structure-Python
 theme:
   name: "material"
+  features:
+    - content.code.annotate
+
 
 plugins:
     - mkdocstrings:
@@ -15,3 +23,15 @@ nav:
   - stack-and-queue.md
   - hash-table.md
   - graphs.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/frustamy
